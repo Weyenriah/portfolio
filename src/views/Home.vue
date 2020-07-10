@@ -1,18 +1,31 @@
 <template>
   <div class="home">
-    <img alt="Vue logo" src="../assets/logo.png">
-    <HelloWorld msg="Welcome to Your Vue.js App"/>
+    <TheHeader/>
+    <TheProjects/>
   </div>
 </template>
 
 <script>
 // @ is an alias to /src
-import HelloWorld from '@/components/HelloWorld.vue'
+import TheHeader from '@/components/TheHeader.vue'
+import TheProjects from '@/components/TheProjects.vue'
 
 export default {
   name: 'Home',
   components: {
-    HelloWorld,
+    TheHeader,
+    TheProjects,
   },
 }
 </script>
+
+<style lang="scss">
+  .red-dot {
+    line-height: 0.0;
+    font-size: 103px;
+    color: #ce0000;
+  }
+  .red-dot-mini {
+    color: #ce0000;
+  }
+</style>
