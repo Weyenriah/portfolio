@@ -4,31 +4,55 @@
     <div class="project-box">
       <section class="project one">
         <div class="information">
-          <section class="focus">
+          <section class="details">
             <p>ux/ui - php - mysql - html - css</p>
           </section>
           <div class="project-name">
             <h3>örebro katthem</h3>
           </div>
         </div>
-      </section>
-      <section class="project">
-        <div class="information">
-          <section class="focus">
-            <p>ux/ui - vue - scss</p>
-          </section>
-          <div class="project-name">
-            <h3>laggIT</h3>
+        <div class="focuses">
+          <div class="focus">
+            <p>web development</p>
+          </div>
+          <div class="focus">
+            <p>web design</p>
           </div>
         </div>
       </section>
       <section class="project">
         <div class="information">
-          <section class="focus">
+          <section class="details">
             <p>ux/ui - html - css - c#/mvc - prototyping</p>
           </section>
           <div class="project-name">
             <h3>help in posifoncare</h3>
+          </div>
+        </div>
+        <div class="focuses">
+          <div class="focus">
+            <p>web development</p>
+          </div>
+          <div class="focus">
+            <p>web design</p>
+          </div>
+          <div class="focus">
+            <p>ux</p>
+          </div>
+        </div>
+      </section>
+      <section class="project">
+        <div class="information">
+          <section class="details">
+            <p>text</p>
+          </section>
+          <div class="project-name">
+            <h3>title</h3>
+          </div>
+        </div>
+        <div class="focuses">
+          <div class="focus">
+            <p>focus</p>
           </div>
         </div>
       </section>
@@ -36,21 +60,37 @@
     <div class="project-box">
       <section class="project four">
         <div class="information">
-          <section class="focus">
+          <section class="details">
             <p>ux/ui - wordpress theme</p>
           </section>
           <div class="project-name">
             <h3>mobilatrygghetslarm.se</h3>
           </div>
         </div>
+        <div class="focuses">
+          <div class="focus">
+            <p>web development</p>
+          </div>
+          <div class="focus">
+            <p>web design</p>
+          </div>
+        </div>
       </section>
       <section class="project">
         <div class="information">
-          <section class="focus">
+          <section class="details">
             <p>processing (p5.js) - game design</p>
           </section>
           <div class="project-name">
             <h3>undefined game title</h3>
+          </div>
+        </div>
+        <div class="focuses">
+          <div class="focus">
+            <p>game development</p>
+          </div>
+          <div class="focus">
+            <p>game design</p>
           </div>
         </div>
       </section>
@@ -73,6 +113,7 @@ export default {
       font-family: "Times New Roman", serif;
       grid-column: 2;
       margin: 40px 0 15px 0;
+      margin-bottom: 10px;
     }
     .project-box {
       grid-column: 2;
@@ -85,6 +126,7 @@ export default {
       }
       .project {
         display: flex;
+        flex-direction: column;
         width: calc(100%/3);
         height: 300px;
         background-color: lightgrey;
@@ -93,6 +135,20 @@ export default {
         background-size: cover;
         border: 1px solid white;
         transition: all .2s ease-in-out;
+        .focuses {
+          display: flex;
+          margin-top: 5px;
+          .focus {
+            background-color: #990000;
+            color: white;
+            padding: 3px 7px;
+            margin: 0 0 5px 5px;
+            p {
+              font-size: 12px;
+              margin: 0;
+            }
+          }
+        }
         .information {
           overflow: hidden;
           height: 0;
@@ -112,7 +168,7 @@ export default {
               font-family: "Times New Roman", serif;
             }
           }
-          .focus {
+          .details {
             width: 0;
             height: 24px;
             background-color: #990000;
@@ -137,7 +193,7 @@ export default {
                 opacity: 10;
               }
             }
-            .focus {
+            .details {
               width: 100%;
               p {
                 opacity: 10;
