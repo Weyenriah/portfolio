@@ -1,6 +1,7 @@
 <template>
   <v-app>
     <v-content>
+      <TheBackground/>
       <router-view/>
       <TheFooter/>
     </v-content>
@@ -9,6 +10,7 @@
 
 <script>
 import TheFooter from '@/components/TheFooter.vue'
+import TheBackground from './components/TheBackground';
 
 export default {
   name: 'App',
@@ -17,6 +19,7 @@ export default {
     //
   }),
   components: {
+    TheBackground,
     TheFooter,
   },
 }
