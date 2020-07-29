@@ -20,6 +20,9 @@ export default {
 </script>
 
 <style lang="scss">
+  .home {
+    min-height: 100%;
+  }
   .red-dot {
     line-height: 0.0;
     font-size: 103px;

@@ -28,7 +28,7 @@ export default {
 <style lang="scss" scoped>
   .background {
     position: absolute;
-    height: 950px;
+    height: 100%;
     width: 100%;
     svg {
       position: absolute;
