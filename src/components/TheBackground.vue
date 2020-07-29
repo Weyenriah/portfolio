@@ -20,14 +20,15 @@
 </template>
 
 <script>
-    export default {
-        name: "TheBackground",
-    }
+export default {
+  name: 'TheBackground',
+}
 </script>
 
 <style lang="scss" scoped>
   .background {
-    height: 900px;
+    position: absolute;
+    height: 950px;
     width: 100%;
     svg {
       position: absolute;

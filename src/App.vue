@@ -10,7 +10,7 @@
 
 <script>
 import TheFooter from '@/components/TheFooter.vue'
-import TheBackground from './components/TheBackground';
+import TheBackground from './components/TheBackground'
 
 export default {
   name: 'App',
