@@ -1,17 +1,30 @@
 <template>
-  <footer>
-    <div class="footer-box">
+  <footer
+    width="100%">
+    <v-card class="text-center"
+      color="light-blue"
+      dark
+      tile
+    >
+      <v-btn
+        v-for="button in buttons"
+        :key="button.name"
+        icon
+        :href="button.href"
+        target="_blank"
+      >
+        <v-icon small>{{ button.icon }}</v-icon>
+      </v-btn>
+    </v-card>
+    <v-card class="text-center"
+      color="blue"
+      flat
+      dark
+      tile>
       <v-card-text class="footer-information">
-        {{ new Date().getFullYear() }} <strong>Felicia Wallin</strong>
-        <v-btn
-          v-for="icon in icons"
-          :key="icon"
-          icon
-        >
-          <v-icon size="24px">{{ icon }}</v-icon>
-        </v-btn>
+        <v-icon small> far fa-copyright</v-icon> {{ new Date().getFullYear() }} <strong>Felicia Wallin</strong>
       </v-card-text>
-    </div>
+    </v-card>
   </footer>
 </template>
 
@@ -19,21 +32,11 @@
 export default {
   name: 'TheFooter',
   data: () => ({
-    icons: [
-      'fab fa-linkedin',
+    buttons: [
+      { icon: 'fas fa-envelope', href: 'mailto:felicia@wallin.design', name: 'email' },
+      { icon: 'fab fa-github', href: 'https://github.com/Weyenriah', name: 'github' },
+      { icon: 'fab fa-linkedin-in', href: 'https://www.linkedin.com/in/felicia-wallin/', name: 'linkedin' },
     ],
   }),
 }
 </script>
-
-<style lang="scss" scoped>
-  .footer-box {
-    width: 100%;
-    box-shadow: none;
-    background-color: #79fcf3;
-    text-align: center;
-    .footer-information {
-      color: #326c6a;
-    }
-  }
-</style>

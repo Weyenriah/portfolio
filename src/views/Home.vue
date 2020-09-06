@@ -1,34 +1,23 @@
 <template>
   <div class="home">
-    <TheHeader/>
+    <TheShowcase/>
     <TheProjects/>
+    <TheAboutMe/>
   </div>
 </template>
 
 <script>
 // @ is an alias to /src
-import TheHeader from '@/components/TheHeader.vue'
+import TheShowcase from '@/components/TheShowcase'
 import TheProjects from '@/components/TheProjects.vue'
+import TheAboutMe from '../components/TheAboutMe'
 
 export default {
   name: 'Home',
   components: {
-    TheHeader,
+    TheShowcase,
     TheProjects,
+    TheAboutMe,
   },
 }
 </script>
-
-<style lang="scss">
-  .home {
-    min-height: 100%;
-  }
-  .red-dot {
-    line-height: 0.0;
-    font-size: 103px;
-    color: #ce0000;
-  }
-  .red-dot-mini {
-    color: #ce0000;
-  }
-</style>

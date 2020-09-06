@@ -1,7 +1,7 @@
 <template>
   <v-app>
     <v-content>
-      <TheBackground/>
+      <TheNavigation/>
       <router-view/>
       <TheFooter/>
     </v-content>
@@ -10,7 +10,7 @@
 
 <script>
 import TheFooter from '@/components/TheFooter.vue'
-import TheBackground from './components/TheBackground'
+import TheNavigation from './components/TheNavigation'
 
 export default {
   name: 'App',
@@ -19,8 +19,8 @@ export default {
     //
   }),
   components: {
-    TheBackground,
     TheFooter,
+    TheNavigation,
   },
 }
 </script>
