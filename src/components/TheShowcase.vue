@@ -12,6 +12,7 @@
       <v-sheet
         :color="colors[i]"
         height="100%"
+        tile
       >
         <v-row
           class="fill-height"

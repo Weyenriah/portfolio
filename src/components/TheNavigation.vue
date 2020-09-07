@@ -4,7 +4,6 @@
       color="blue"
       dark
       flat
-      fixed
     >
       <!-- Spec. because some other <div> made it impossible to seperate title + icon -->
       <v-card class="d-flex justify-space-between align-center"
@@ -12,7 +11,7 @@
         color="blue"
         flat
       >
-        <v-toolbar-title>wallin.design</v-toolbar-title>
+        <v-toolbar-title>wallin.design - web, design, ux</v-toolbar-title>
 
         <v-app-bar-nav-icon @click="drawer = true"><v-icon>fas fa-bars</v-icon></v-app-bar-nav-icon>
       </v-card>

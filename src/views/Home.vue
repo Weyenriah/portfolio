@@ -8,8 +8,8 @@
 
 <script>
 // @ is an alias to /src
-import TheShowcase from '@/components/TheShowcase'
-import TheProjects from '@/components/TheProjects.vue'
+import TheShowcase from '../components/TheShowcase'
+import TheProjects from '../components/TheProjects.vue'
 import TheAboutMe from '../components/TheAboutMe'
 
 export default {
