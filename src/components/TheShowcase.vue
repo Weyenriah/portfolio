@@ -4,7 +4,7 @@
     hide-delimiter-background
     hide-delimiters
     cycle
-    :interval="5000"
+    :interval="6000"
     progress
     progress-color="#d00202"
   >
@@ -28,11 +28,11 @@
           align="center"
           justify="center"
         >
-          <div class="d-flex flex-column">
-            <p class="mb-0">{{ item.type }}</p>
-            <h2>{{ item.title }}</h2>
+          <div class="d-flex flex-column carousel-content">
+            <p class="mb-0 carousel-type">{{ item.type }}</p>
+            <h2><span class="thin">{{ item.thinTitle }}</span>{{ item.boldTitle }}</h2>
             <p>{{ item.shortDesc }}</p>
-            <a :href="item.link">Go to project</a>
+            <a :href="item.link">Go to project <v-icon>fa-angle-double-right</v-icon></a>
           </div>
         </v-row>
       </v-sheet>
@@ -48,27 +48,21 @@ export default {
       items: [
         {
           src: require('../assets/orebro-katthem.jpg'),
-          title: 'Örebro Katthem',
+          thinTitle: 'Örebro',
+          boldTitle: ' Katthem',
           type: 'website',
-          shortDesc: 'Text',
+          shortDesc: 'A responsive webpage with admin UI designed to match the workflow of the volunteers.',
           link: '#',
           diffAlignment: 'grid-align-right',
         },
         {
           src: require('../assets/the-penguin-company.jpg'),
-          title: 'The Penguin Company',
+          thinTitle: 'The',
+          boldTitle: ' Penguin Company',
           type: 'logotype',
-          shortDesc: 'Text',
+          shortDesc: 'A logotype designed for a mock-company that sells only penguin costumes.',
           link: '#',
           diffAlignment: 'grid-align-right',
-        },
-        {
-          src: require('../assets/the-climate-report.jpg'), // Needs another image
-          title: 'The Climate Report',
-          type: 'game',
-          shortDesc: 'Text',
-          link: '#',
-          // Defaults left alignment
         },
       ],
     }
@@ -80,6 +74,36 @@ export default {
   .carousel-grid {
     display: grid;
     grid-template-columns: 50% 50%;
+    .carousel-content {
+      border-left: 7px solid #d00202;
+      background-color: rgba(0,0,0,0.5);
+      padding: 10px 20px;
+      max-width: 86%;
+      .carousel-type {
+        background-color: #d00202;
+        text-align: center;
+        border-radius: 3px;
+        font-weight: bold;
+        width: 50%;
+      }
+      h2 {
+        .thin {
+          font-weight: normal;
+        }
+      }
+      a {
+        text-decoration: none;
+        color: white;
+        text-align: right;
+        transition: all .5s;
+        &:hover {
+          font-weight: bold;
+        }
+        i {
+          font-size: 18px;
+        }
+      }
+    }
     .grid-align-right { /* Left is default */
       grid-column: 2;
     }
