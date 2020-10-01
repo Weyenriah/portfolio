@@ -56,7 +56,7 @@ export default {
           diffAlignment: 'grid-align-right',
         },
         {
-          src: require('../assets/the-climate-report.jpg'), // Needs another image
+          src: require('../assets/the-climate-report.jpg'),
           thinTitle: 'The',
           boldTitle: ' Climate Report',
           type: 'game',
