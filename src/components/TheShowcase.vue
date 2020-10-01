@@ -4,7 +4,7 @@
     hide-delimiter-background
     hide-delimiters
     cycle
-    :interval="6000"
+    :interval="8000"
     progress
     progress-color="#d00202"
   >
@@ -54,6 +54,15 @@ export default {
           shortDesc: 'A responsive webpage with admin UI designed to match the workflow of the volunteers.',
           link: '#',
           diffAlignment: 'grid-align-right',
+        },
+        {
+          src: require('../assets/the-climate-report.jpg'), // Needs another image
+          thinTitle: 'The',
+          boldTitle: ' Climate Report',
+          type: 'game',
+          shortDesc: 'A game with the goal of highlighting different choices connected to climate change, in a fun and easy way.',
+          link: '#',
+          // Default Alignment: Left
         },
         {
           src: require('../assets/the-penguin-company.jpg'),
