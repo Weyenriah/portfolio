@@ -11,7 +11,7 @@
         :key="project.id"
       >
         <v-img
-          class="align-end"
+          class="align-end project-image"
           height="100%"
           :src="project.img"
         >
@@ -33,6 +33,7 @@ export default {
       { id: 0, title: 'Örebro Katthem', subtitle: 'webpage', to: '#', img: require('../assets/orebro-katthem.jpg') },
       { id: 1, title: 'The Climate Report', subtitle: 'game', to: '#', img: require('../assets/the-climate-report.jpg') },
       { id: 2, title: 'The Penguin Company', subtitle: 'logotype', to: '#', img: require('../assets/the-penguin-company.jpg') },
+      { id: 3, title: 'F-W', subtitle: 'logotype', to: '#', img: require('../assets/fw-logo.jpg') },
     ],
   }),
 }
