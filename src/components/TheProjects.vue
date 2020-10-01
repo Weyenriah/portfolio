@@ -1,21 +1,24 @@
 <template>
   <v-container>
-    <h2>Projects</h2>
-    <div class="d-flex flex-wrap justify-space-between">
-      <v-card class="mb-6"
-        width="350"
+    <h2>projects<span class="redify">.</span></h2>
+    <div class="projects-grid">
+      <v-card
         dark
         hover
+        tile
         :to="project.to"
         v-for="(project) in projects"
         :key="project.id"
       >
         <v-img
           class="align-end"
+          height="100%"
           :src="project.img"
         >
-          <v-card-title>{{ project.title }}</v-card-title>
-          <v-card-subtitle>{{ project.subtitle }}</v-card-subtitle>
+          <div class="project-content-box">
+            <v-card-title class="project-title">{{ project.title }}</v-card-title>
+            <v-card-subtitle class="project-type">{{ project.subtitle }}</v-card-subtitle>
+          </div>
         </v-img>
       </v-card>
     </div>
@@ -27,16 +30,43 @@ export default {
   name: 'TheProjects',
   data: () => ({
     projects: [
-      { id: 0, title: 'Rubrik1', subtitle: 'Undertitel1', to: '#', img: 'https://cdn.vuetifyjs.com/images/cards/docks.jpg' },
-      { id: 1, title: 'Rubrik2', subtitle: 'Undertitel2', to: '#', img: 'https://cdn.vuetifyjs.com/images/cards/docks.jpg' },
-      { id: 2, title: 'Rubrik3', subtitle: 'Undertitel3', to: '#', img: 'https://cdn.vuetifyjs.com/images/cards/docks.jpg' },
-      { id: 3, title: 'Rubrik4', subtitle: 'Undertitel4', to: '#', img: 'https://cdn.vuetifyjs.com/images/cards/docks.jpg' },
-      { id: 4, title: 'Rubrik5', subtitle: 'Undertitel5', to: '#', img: 'https://cdn.vuetifyjs.com/images/cards/docks.jpg' },
+      { id: 0, title: 'Örebro Katthem', subtitle: 'webpage', to: '#', img: require('../assets/orebro-katthem.jpg') },
+      { id: 1, title: 'The Climate Report', subtitle: 'game', to: '#', img: require('../assets/the-climate-report.jpg') },
+      { id: 2, title: 'The Penguin Company', subtitle: 'logotype', to: '#', img: require('../assets/the-penguin-company.jpg') },
     ],
   }),
 }
 </script>
 
 <style lang="scss" scoped>
-
+  .projects-grid {
+    display: grid;
+    grid-template-columns: calc(100%/3) calc(100%/3) calc(100%/3);
+    .project-content-box {
+      background-color: rgba(0, 0, 0, 0.5);
+      border-left: 7px solid #d00202;
+      padding-bottom: 10px;
+      .project-title {
+        padding-top: 10px;
+      }
+      .project-type {
+        width: 33%;
+        padding: 0;
+        text-align: center;
+        background-color: #d00202;
+        border-radius: 3px;
+        margin-left: 15px;
+      }
+    }
+  }
+  @media only screen and (max-width: 980px) {
+    .projects-grid {
+      grid-template-columns: calc(100%/2) calc(100%/2);
+    }
+  }
+  @media only screen and (max-width: 615px) {
+    .projects-grid {
+      grid-template-columns: 100%;
+    }
+  }
 </style>

@@ -23,12 +23,5 @@ export default {
   .typography-nav {
     font-family: "Arial", sans-serif;
     font-size: 23px;
-    .redify {
-      color: #d00202;
-      font-size: 30px;
-    }
-    .boldify {
-      font-weight: bold;
-    }
   }
 </style>

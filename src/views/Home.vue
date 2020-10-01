@@ -23,5 +23,11 @@ export default {
 </script>
 
 <style lang="scss">
-
+  .redify {
+    color: #d00202;
+    font-size: 30px;
+  }
+  .boldify {
+    font-weight: bold;
+  }
 </style>
