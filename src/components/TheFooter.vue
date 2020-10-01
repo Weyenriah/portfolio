@@ -2,7 +2,7 @@
   <footer
     width="100%">
     <v-card class="text-center"
-      color="light-blue"
+      color="#d00202"
       dark
       tile
     >
@@ -17,12 +17,12 @@
       </v-btn>
     </v-card>
     <v-card class="text-center"
-      color="blue"
+      color="black"
       flat
       dark
       tile>
       <v-card-text class="footer-information">
-        <v-icon small> far fa-copyright</v-icon> {{ new Date().getFullYear() }} <strong>Felicia Wallin</strong>
+        <v-icon small style="margin-top: -4px;"> far fa-copyright</v-icon> {{ new Date().getFullYear() }} <strong>Felicia Wallin</strong>
       </v-card-text>
     </v-card>
   </footer>
