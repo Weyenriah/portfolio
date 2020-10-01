@@ -23,5 +23,6 @@ export default {
   .typography-nav {
     font-family: "Arial", sans-serif;
     font-size: 23px;
+    margin-top: -15px;
   }
 </style>

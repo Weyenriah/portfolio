@@ -25,7 +25,15 @@ export default {
 <style lang="scss">
   .redify {
     color: #d00202;
-    font-size: 30px;
+    font-size: 50px;
+  }
+  .greenify {
+    color: #038407;
+    font-size: 50px;
+  }
+  .blueify {
+    color: #0255d0;
+    font-size: 50px;
   }
   .boldify {
     font-weight: bold;

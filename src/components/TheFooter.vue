@@ -2,7 +2,7 @@
   <footer
     width="100%">
     <v-card class="text-center"
-      color="#d00202"
+      color="#0255d0"
       dark
       tile
     >

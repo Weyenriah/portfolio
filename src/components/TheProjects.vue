@@ -1,6 +1,6 @@
 <template>
   <v-container>
-    <h2>projects<span class="redify">.</span></h2>
+    <h2>projects<span class="greenify">.</span></h2>
     <div class="projects-grid">
       <v-card
         dark
@@ -40,12 +40,15 @@ export default {
 </script>
 
 <style lang="scss" scoped>
+  h2 {
+    margin-top: -15px;
+  }
   .projects-grid {
     display: grid;
     grid-template-columns: calc(100%/3) calc(100%/3) calc(100%/3);
     .project-content-box {
       background-color: rgba(0, 0, 0, 0.5);
-      border-left: 7px solid #d00202;
+      border-left: 7px solid #038407;
       padding-bottom: 10px;
       .project-title {
         padding-top: 10px;
@@ -54,7 +57,7 @@ export default {
         width: 33%;
         padding: 0;
         text-align: center;
-        background-color: #d00202;
+        background-color: #038407;
         border-radius: 3px;
         margin-left: 15px;
       }

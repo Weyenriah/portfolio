@@ -9,7 +9,7 @@
               color="transparent"
       >
         <v-card-text>
-          <h2>About me</h2>
+          <h2>about me<span class="blueify">.</span></h2>
           Lorem Ipsum
         </v-card-text>
       </v-card>
@@ -26,6 +26,6 @@ export default {
 
 <style lang="scss" scoped>
   #about-me {
-    background-color: rgb(33, 150, 243);
+    background-color: white;
   }
 </style>
