@@ -26,20 +26,20 @@ export default {
   h2 {
     font-size: 32px;
   }
-  .main-h {
-    margin-top: -15px;
-  }
   .redify {
-    color: #d00202;
-    font-size: 50px;
+    color: #d00202 !important;
+    font-size: 18px;
+    margin-left: 5px;
   }
   .greenify {
-    color: #04b309;
-    font-size: 50px;
+    color: #04b309 !important;
+    font-size: 18px;
+    margin-left: 5px;
   }
   .blueify {
-    color: #0255d0;
-    font-size: 50px;
+    color: #0255d0 !important;
+    font-size: 18px;
+    margin-left: 5px;
   }
   .boldify {
     font-weight: bold;

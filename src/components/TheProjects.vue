@@ -1,7 +1,8 @@
 <template>
   <v-container>
     <h2 class="main-h">
-      pro<span class="thinify">jects</span><span class="greenify">.</span>
+      pro<span class="thinify">jects</span>
+      <v-icon class="greenify">fa-circle</v-icon>
     </h2>
     <div class="projects-grid">
       <v-card
@@ -31,10 +32,11 @@ export default {
   name: 'TheProjects',
   data: () => ({
     projects: [
-      { id: 0, title: 'Örebro Katthem', subtitle: 'webpage', to: '#', img: require('../assets/orebro-katthem.jpg') },
+      { id: 0, title: 'Örebro Katthem', subtitle: 'website', to: '#', img: require('../assets/orebro-katthem.jpg') },
       { id: 1, title: 'The Climate Report', subtitle: 'game', to: '#', img: require('../assets/the-climate-report.jpg') },
       { id: 2, title: 'The Penguin Company', subtitle: 'logotype', to: '#', img: require('../assets/the-penguin-company.jpg') },
       { id: 3, title: 'F-W', subtitle: 'logotype', to: '#', img: require('../assets/fw-logo.jpg') },
+      { id: 4, title: 'Mobilatrygghetslarm.se', subtitle: 'website', to: '#', img: require('../assets/mobilatrygghetslarm.jpg') },
     ],
   }),
 }

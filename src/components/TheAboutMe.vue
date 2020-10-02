@@ -9,7 +9,7 @@
               color="transparent"
       >
         <h2 class="main-h">
-          <span class="thinify">about</span> me<span class="blueify">.</span>
+          <span class="thinify">about</span> me<v-icon class="blueify">fa-circle</v-icon>
         </h2>
         <v-card-text>
           Lorem Ipsum
