@@ -35,7 +35,7 @@ export default {
     .container {
       padding: 0 12px;
       .about-me-pic {
-        border-left: 10px solid #0255d0;
+        border-left: 10px solid #0957bd;
       }
     }
   }

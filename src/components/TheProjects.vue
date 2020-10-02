@@ -11,8 +11,8 @@
         dark
         tile
         :to="project.to"
-        v-for="(project) in projects"
-        :key="project.id"
+        v-for="(project, i) in p"
+        :key="i"
       >
         <v-img
           class="align-end project-image"
@@ -23,7 +23,15 @@
             <v-card-title class="project-title">
               {{ project.title }}
             </v-card-title>
-            <v-card-subtitle class="project-type">{{ project.subtitle }}</v-card-subtitle>
+            <div class="d-flex">
+              <v-card-subtitle
+                v-for="tag in project.tags"
+                :key="tag"
+                class="project-type"
+              >
+                {{ tag }}
+              </v-card-subtitle>
+            </div>
           </div>
         </v-img>
       </v-card>
@@ -32,17 +40,28 @@
 </template>
 
 <script>
+import { mapState } from 'vuex'
+
 export default {
   name: 'TheProjects',
   data: () => ({
-    projects: [
-      { id: 0, title: 'Örebro Katthem', subtitle: 'website', to: '#', img: require('../assets/orebro-katthem.jpg') },
-      { id: 1, title: 'The Climate Report', subtitle: 'game', to: '#', img: require('../assets/the-climate-report.jpg') },
-      { id: 2, title: 'The Penguin Company', subtitle: 'logotype', to: '#', img: require('../assets/the-penguin-company.jpg') },
-      { id: 3, title: 'F-W', subtitle: 'logotype', to: '#', img: require('../assets/fw-logo.jpg') },
-      { id: 4, title: 'Mobilatrygghetslarm.se', subtitle: 'website', to: '#', img: require('../assets/mobilatrygghetslarm.jpg') },
-    ],
+    selectedTags: [],
   }),
+  computed: {
+    p () {
+      return this.projects.filter((o) => {
+        if (this.selectedTags.length === 0) {
+          return true
+        }
+        return this.selectedTags.some((selectTag) => {
+          return o.tags.some((tag) => {
+            return tag === selectTag
+          })
+        })
+      })
+    },
+    ...mapState(['projects']),
+  },
 }
 </script>
 
@@ -52,28 +71,28 @@ export default {
     grid-template-columns: calc(33% - 10px) calc(33% - 10px) calc(33% - 10px);
     gap: 15px;
     .project-image {
-      border-left: 10px solid #04b309;
+      border-left: 10px solid #059809;
       transition: all .5s;
       .project-content-box {
         background-color: rgba(0, 0, 0, 0.5);
         padding-bottom: 10px;
         .project-title {
-          padding-top: 10px;
+          padding: 10px 0 0 15px;
         }
         .project-type {
           width: 33%;
           padding: 0;
           text-align: center;
-          background-color: #04b309;
+          background-color: #059809;
           border-radius: 3px;
           margin-left: 15px;
           transition: all .5s;
         }
       }
       &:hover {
-        border-left: 10px solid #06d50c;
+        border-left: 10px solid #05b10a;
         .project-type {
-          background-color: #06d50c;
+          background-color: #05b10a;
         }
       }
     }

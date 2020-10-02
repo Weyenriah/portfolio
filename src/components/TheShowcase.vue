@@ -16,24 +16,22 @@
       color="black"
     >
       <v-sheet
-        class="carousel-grid"
         color="transparent"
         height="100%"
         tile
       >
         <v-row
-          class="fill-height"
+          class="fill-height carousel-flex"
           :class="item.diffAlignment"
           align="center"
-          justify="center"
         >
-          <div class="d-flex flex-column carousel-content">
+          <div class="d-flex flex-column carousel-container">
             <p class="mb-0 carousel-type">{{ item.type }}</p>
             <h2>
               <span class="thin">{{ item.thinTitle }}</span>{{ item.boldTitle }}
             </h2>
             <p>{{ item.shortDesc }}</p>
-            <a :href="item.link">Go to project <v-icon>fa-angle-double-right</v-icon></a>
+            <a :href="item.link">Go to project</a>
           </div>
         </v-row>
       </v-sheet>
@@ -63,7 +61,7 @@ export default {
           type: 'game',
           shortDesc: 'A game with the goal of highlighting different choices connected to climate change, in a fun and easy way.',
           link: '#',
-          // Default Alignment: Left
+          diffAlignment: 'grid-align-right',
         },
         {
           src: require('../assets/the-penguin-company.jpg'),
@@ -81,14 +79,17 @@ export default {
 </script>
 
 <style lang="scss" scoped>
-  .carousel-grid {
-    display: grid;
-    grid-template-columns: 50% 50%;
-    .carousel-content {
+  .carousel-flex {
+    display: flex;
+    justify-content: flex-end;
+    .carousel-container {
       border-left: 10px solid #d00202;
       background-color: rgba(0,0,0,0.5);
-      padding: 10px 20px;
-      max-width: 86%;
+      padding: 10px 30px 10px 20px;
+      width: 50%;
+      // transform: skewX(-10deg);
+      height: 100%;
+      justify-content: center;
       .carousel-type {
         background-color: #d00202;
         text-align: center;
@@ -104,8 +105,8 @@ export default {
       a {
         text-decoration: none;
         color: white;
-        text-align: right;
         transition: all .5s;
+        text-align: right;
         &:hover {
           font-weight: bold;
         }
@@ -114,15 +115,11 @@ export default {
         }
       }
     }
-    .grid-align-right { /* Left is default */
-      grid-column: 2;
-    }
   }
-  @media only screen and (max-width: 560px) {
-    .carousel-grid {
-      grid-template-columns: 100%;
-      .grid-align-right { /* Left is default */
-        grid-column: 1;
+  @media only screen and (max-width: 725px) {
+    .carousel-flex {
+      .carousel-container {
+        width: 90%;
       }
     }
   }

@@ -38,12 +38,12 @@ export default {
     margin-left: 5px;
   }
   .greenify {
-    color: #04b309 !important;
+    color: #059809 !important;
     font-size: 18px;
     margin-left: 5px;
   }
   .blueify {
-    color: #0255d0 !important;
+    color: #0957bd !important;
     font-size: 18px;
     margin-left: 5px;
   }

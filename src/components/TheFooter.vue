@@ -1,26 +1,29 @@
 <template>
-  <footer
-    width="100%">
-    <v-card class="text-center"
-      color="#0255d0"
+  <footer>
+    <v-card class="d-flex justify-center align-center"
+      color="#0957bd"
+      height="40px"
       dark
       tile
     >
-      <v-btn
-        v-for="button in buttons"
-        :key="button.name"
-        icon
-        :href="button.href"
-        target="_blank"
-      >
-        <v-icon small>{{ button.icon }}</v-icon>
-      </v-btn>
+      <div class="footer-buttons d-flex justify-space-between">
+        <v-btn
+          v-for="button in buttons"
+          :key="button.name"
+          icon
+          :href="button.href"
+          target="_blank"
+        >
+          <v-icon>{{ button.icon }}</v-icon>
+        </v-btn>
+      </div>
     </v-card>
     <v-card class="text-center"
       color="black"
       flat
       dark
-      tile>
+      tile
+    >
       <v-card-text class="footer-information">
         <v-icon small style="margin-top: -4px;"> far fa-copyright</v-icon> {{ new Date().getFullYear() }} <strong>Felicia Wallin</strong>
       </v-card-text>
@@ -40,3 +43,9 @@ export default {
   }),
 }
 </script>
+
+<style lang="scss" scoped>
+  .footer-buttons {
+    width: 30%;
+  }
+</style>
