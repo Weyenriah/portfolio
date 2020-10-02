@@ -1,8 +1,10 @@
 <template>
-  <v-container>
+  <v-container id="projects">
     <h2 class="main-h">
       pro<span class="thinify">jects</span>
+      <v-icon class="greyify">fa-circle</v-icon>
       <v-icon class="greenify">fa-circle</v-icon>
+      <v-icon class="greyify">fa-circle</v-icon>
     </h2>
     <div class="projects-grid">
       <v-card
@@ -18,7 +20,9 @@
           :src="project.img"
         >
           <div class="project-content-box">
-            <v-card-title class="project-title">{{ project.title }}</v-card-title>
+            <v-card-title class="project-title">
+              {{ project.title }}
+            </v-card-title>
             <v-card-subtitle class="project-type">{{ project.subtitle }}</v-card-subtitle>
           </div>
         </v-img>

@@ -2,7 +2,6 @@
   <v-carousel
     :show-arrows="false"
     hide-delimiter-background
-    hide-delimiters
     cycle
     :interval="8000"
     progress
@@ -30,7 +29,9 @@
         >
           <div class="d-flex flex-column carousel-content">
             <p class="mb-0 carousel-type">{{ item.type }}</p>
-            <h2><span class="thin">{{ item.thinTitle }}</span>{{ item.boldTitle }}</h2>
+            <h2>
+              <span class="thin">{{ item.thinTitle }}</span>{{ item.boldTitle }}
+            </h2>
             <p>{{ item.shortDesc }}</p>
             <a :href="item.link">Go to project <v-icon>fa-angle-double-right</v-icon></a>
           </div>
@@ -84,7 +85,7 @@ export default {
     display: grid;
     grid-template-columns: 50% 50%;
     .carousel-content {
-      border-left: 7px solid #d00202;
+      border-left: 10px solid #d00202;
       background-color: rgba(0,0,0,0.5);
       padding: 10px 20px;
       max-width: 86%;

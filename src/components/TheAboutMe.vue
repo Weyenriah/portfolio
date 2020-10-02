@@ -2,20 +2,23 @@
   <v-container id="about-me"
    fluid
   >
-    <v-container class="d-flex flex-row">
-      <v-card width="50%"
-              flat
+    <v-container class="d-flex flex-row justify-space-between">
+      <v-card flat
               tile
               color="transparent"
+              width="100%"
       >
         <h2 class="main-h">
-          <span class="thinify">about</span> me<v-icon class="blueify">fa-circle</v-icon>
+          <span class="thinify">about</span> me
+          <v-icon class="greyify">fa-circle</v-icon>
+          <v-icon class="greyify">fa-circle</v-icon>
+          <v-icon class="blueify">fa-circle</v-icon>
         </h2>
-        <v-card-text>
-          Lorem Ipsum
-        </v-card-text>
+        <p>
+          Text about me
+        </p>
       </v-card>
-      <v-img width="400px" :src="require('../assets/picture-felicia-wallin.png')"/>
+      <v-img class="about-me-pic" max-width="40%" :src="require('../assets/picture-felicia-wallin.png')"/>
     </v-container>
   </v-container>
 </template>
@@ -29,5 +32,23 @@ export default {
 <style lang="scss" scoped>
   #about-me {
     background-color: white;
+    .container {
+      padding: 0 12px;
+      .about-me-pic {
+        border-left: 10px solid #0255d0;
+      }
+    }
+  }
+  @media only screen and (max-width: 550px) {
+    #about-me {
+      .container {
+        flex-direction: column !important;
+        .about-me-pic {
+          margin-left: auto;
+          margin-right: auto;
+          max-width: 100% !important;
+        }
+      }
+    }
   }
 </style>
