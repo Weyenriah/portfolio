@@ -8,12 +8,14 @@
               tile
               color="transparent"
       >
+        <h2 class="main-h">
+          <span class="thinify">about</span> me<span class="blueify">.</span>
+        </h2>
         <v-card-text>
-          <h2>about me<span class="blueify">.</span></h2>
           Lorem Ipsum
         </v-card-text>
       </v-card>
-      <v-img width="50%" src="https://cdn.vuetifyjs.com/images/cards/docks.jpg"/>
+      <v-img width="400px" :src="require('../assets/picture-felicia-wallin.png')"/>
     </v-container>
   </v-container>
 </template>

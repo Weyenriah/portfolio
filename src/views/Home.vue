@@ -23,12 +23,18 @@ export default {
 </script>
 
 <style lang="scss">
+  h2 {
+    font-size: 32px;
+  }
+  .main-h {
+    margin-top: -15px;
+  }
   .redify {
     color: #d00202;
     font-size: 50px;
   }
   .greenify {
-    color: #038407;
+    color: #04b309;
     font-size: 50px;
   }
   .blueify {
@@ -37,5 +43,8 @@ export default {
   }
   .boldify {
     font-weight: bold;
+  }
+  .thinify {
+    font-weight: normal;
   }
 </style>

@@ -1,10 +1,11 @@
 <template>
   <v-container>
-    <h2>projects<span class="greenify">.</span></h2>
+    <h2 class="main-h">
+      pro<span class="thinify">jects</span><span class="greenify">.</span>
+    </h2>
     <div class="projects-grid">
       <v-card
         dark
-        hover
         tile
         :to="project.to"
         v-for="(project) in projects"
@@ -40,37 +41,47 @@ export default {
 </script>
 
 <style lang="scss" scoped>
-  h2 {
-    margin-top: -15px;
-  }
   .projects-grid {
     display: grid;
-    grid-template-columns: calc(100%/3) calc(100%/3) calc(100%/3);
-    .project-content-box {
-      background-color: rgba(0, 0, 0, 0.5);
-      border-left: 7px solid #038407;
-      padding-bottom: 10px;
-      .project-title {
-        padding-top: 10px;
+    grid-template-columns: calc(33% - 10px) calc(33% - 10px) calc(33% - 10px);
+    gap: 15px;
+    .project-image {
+      border-left: 10px solid #04b309;
+      transition: all .5s;
+      .project-content-box {
+        background-color: rgba(0, 0, 0, 0.5);
+        padding-bottom: 10px;
+        .project-title {
+          padding-top: 10px;
+        }
+        .project-type {
+          width: 33%;
+          padding: 0;
+          text-align: center;
+          background-color: #04b309;
+          border-radius: 3px;
+          margin-left: 15px;
+          transition: all .5s;
+        }
       }
-      .project-type {
-        width: 33%;
-        padding: 0;
-        text-align: center;
-        background-color: #038407;
-        border-radius: 3px;
-        margin-left: 15px;
+      &:hover {
+        border-left: 10px solid #06d50c;
+        .project-type {
+          background-color: #06d50c;
+        }
       }
     }
   }
   @media only screen and (max-width: 980px) {
     .projects-grid {
-      grid-template-columns: calc(100%/2) calc(100%/2);
+      grid-template-columns: calc(50% - 5px) calc(50% - 5px);
+      gap: 10px;
     }
   }
   @media only screen and (max-width: 615px) {
     .projects-grid {
       grid-template-columns: 100%;
+      column-gap: 0;
     }
   }
 </style>
