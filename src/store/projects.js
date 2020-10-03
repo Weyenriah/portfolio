@@ -43,8 +43,8 @@ export default [
   {
     id: 4,
     slug: 'f-w',
-    thinTitle: '',
-    boldTitle: 'F-W',
+    thinTitle: 'F-',
+    boldTitle: 'W',
     tags: ['logotype'],
     img: require('../assets/images/fw-logo.jpg'),
     compImg: require('../assets/images/computer.jpg'),
@@ -55,8 +55,8 @@ export default [
   {
     id: 5,
     slug: 'mobilatrygghetslarm',
-    thinTitle: '',
-    boldTitle: 'Mobilatrygghetslarm.se',
+    thinTitle: 'Mobila',
+    boldTitle: 'trygghetslarm.se',
     tags: ['website', 'wordpress'],
     img: require('../assets/images/mobilatrygghetslarm.jpg'),
     compImg: require('../assets/images/computer.jpg'),
