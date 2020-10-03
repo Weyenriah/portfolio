@@ -29,7 +29,7 @@
           </div>
           <div class="mt-2">
             <p>
-              {{ project.excerpt }} {{ project.longerDesc }}
+              <span class="boldify">{{ project.excerpt }}</span> {{ project.longerDesc }}
               <q class="quote">{{ project.quote }}</q>
             </p>
           </div>
