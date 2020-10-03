@@ -38,7 +38,9 @@
               <span class="thin">{{ project.thinTitle }}</span>{{ project.boldTitle }}
             </h2>
             <p> {{ project.excerpt }} </p>
-            <a>Go to project</a>
+            <router-link :to="'project/' + project.slug">
+              Go to project
+            </router-link>
           </div>
         </v-row>
       </v-sheet>
@@ -65,15 +67,15 @@ export default {
     display: flex;
     justify-content: flex-end;
     .carousel-container {
-      border-left: 10px solid #d00202;
+      border-left: 10px solid $redify;
       background-color: rgba(0,0,0,0.5);
-      padding: 10px 30px 10px 20px;
+      padding: 10px 50px 10px 20px;
       width: 50%;
-      // transform: skewX(-10deg);
+      transform: skewX(-5deg) translateX(30px);
       height: 100%;
       justify-content: center;
       .carousel-type {
-        background-color: #d00202;
+        background-color: $redify;
       }
       h2 {
         .thin {

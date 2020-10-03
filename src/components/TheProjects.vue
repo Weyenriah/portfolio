@@ -2,9 +2,9 @@
   <v-container id="projects">
     <h2 class="main-h">
       pro<span class="thinify">jects</span>
-      <v-icon class="greyify">fa-circle</v-icon>
-      <v-icon class="greenify">fa-circle</v-icon>
-      <v-icon class="greyify">fa-circle</v-icon>
+      <v-icon class="big-dots greyify">fa-circle</v-icon>
+      <v-icon class="big-dots greenify">fa-circle</v-icon>
+      <v-icon class="big-dots greyify">fa-circle</v-icon>
     </h2>
     <v-chip-group
       multiple
@@ -114,7 +114,7 @@ export default {
     grid-template-columns: calc(33% - 10px) calc(33% - 10px) calc(33% - 10px);
     gap: 15px;
     .project-image {
-      border-left: 10px solid #059809;
+      border-left: 10px solid $greenify;
       transition: all .5s;
       .project-content-box {
         background-color: rgba(0, 0, 0, 0.5);
@@ -125,15 +125,15 @@ export default {
         }
         .project-type {
           text-align: center;
-          background-color: #059809;
+          background-color: $greenify;
           margin-left: 15px;
           transition: all .5s;
         }
       }
       &:hover {
-        border-left: 10px solid #05b10a;
+        border-left: 10px solid $hoverGreenify;
         .project-type {
-          background-color: #05b10a;
+          background-color: $hoverGreenify;
         }
       }
     }

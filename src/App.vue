@@ -24,3 +24,10 @@ export default {
   },
 }
 </script>
+
+<style lang="scss">
+  #projects, #about-me {
+    margin-top: 20px;
+    margin-bottom: 20px;
+  }
+</style>

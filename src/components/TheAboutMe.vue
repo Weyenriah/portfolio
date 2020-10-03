@@ -10,15 +10,15 @@
       >
         <h2 class="main-h">
           <span class="thinify">about</span> me
-          <v-icon class="greyify">fa-circle</v-icon>
-          <v-icon class="greyify">fa-circle</v-icon>
-          <v-icon class="blueify">fa-circle</v-icon>
+          <v-icon class="big-dots greyify">fa-circle</v-icon>
+          <v-icon class="big-dots greyify">fa-circle</v-icon>
+          <v-icon class="big-dots blueify">fa-circle</v-icon>
         </h2>
         <p>
           Text about me
         </p>
       </v-card>
-      <v-img class="about-me-pic" max-width="40%" :src="require('../assets/picture-felicia-wallin.png')"/>
+      <v-img class="about-me-pic" max-width="40%" :src="require('../assets/images/picture-felicia-wallin.png')"/>
     </v-container>
   </v-container>
 </template>
@@ -35,7 +35,7 @@ export default {
     .container {
       padding: 0 12px;
       .about-me-pic {
-        border-left: 10px solid #0957bd;
+        border-left: 10px solid $blueify;
       }
     }
   }

@@ -1,0 +1,36 @@
+$redify: #d00202;
+$blueify: #0957bd;
+$greenify: #059809;
+$hoverGreenify: #05b10a;
+$whiteify: rgba(255,255,255,0.2);
+$greyify: rgba(0, 0, 0, 0.1);
+
+h2 {
+  font-size: 32px;
+  font-weight: bolder;
+}
+.big-dots {
+  font-size: 18px;
+  margin-left: 5px;
+}
+.redify {
+  color: $redify !important;
+}
+.greenify {
+  color: $greenify !important;
+}
+.blueify {
+  color: $blueify !important;
+}
+.greyify {
+  color: $greyify !important;
+}
+.whiteify {
+  color: $whiteify !important;
+}
+.boldify {
+  font-weight: bolder;
+}
+.thinify {
+  font-weight: normal;
+}

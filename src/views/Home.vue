@@ -24,43 +24,5 @@ export default {
 </script>
 
 <style lang="scss">
-  #projects, #about-me {
-    margin-top: 20px;
-    margin-bottom: 20px;
-  }
-  h2 {
-    font-size: 32px;
-    font-weight: bolder;
-  }
-  .redify {
-    color: #d00202 !important;
-    font-size: 18px;
-    margin-left: 5px;
-  }
-  .greenify {
-    color: #059809 !important;
-    font-size: 18px;
-    margin-left: 5px;
-  }
-  .blueify {
-    color: #0957bd !important;
-    font-size: 18px;
-    margin-left: 5px;
-  }
-  .greyify {
-    color: rgba(0,0,0,0.1) !important;
-    font-size: 18px;
-    margin-left: 5px;
-  }
-  .whiteify {
-    color: rgba(255,255,255,0.2) !important;
-    font-size: 18px;
-    margin-left: 5px;
-  }
-  .boldify {
-    font-weight: bolder;
-  }
-  .thinify {
-    font-weight: normal;
-  }
+
 </style>
