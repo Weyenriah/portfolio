@@ -1,7 +1,7 @@
 <template>
   <v-container>
     <v-sheet>
-      <p>{{ project.title }}</p>
+      <p>{{ project.thinTitle }} {{ project.boldTitle }}</p>
     </v-sheet>
    <!-- Image (computer)
     Title
@@ -18,7 +18,7 @@ export default {
   name: 'TheProject',
   computed: {
     project () {
-      return this.projects.find((p) => p.id === Number(this.$route.params.id))
+      return this.projects.find((p) => p.slug === this.$route.params.slug)
     },
     ...mapState(['projects']),
   },

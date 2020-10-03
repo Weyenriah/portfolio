@@ -27,7 +27,7 @@
       <v-card
         dark
         tile
-        :to="'project/' + project.id"
+        :to="'project/' + project.slug"
         v-for="(project) in p"
         :key="project.id"
       >
@@ -37,9 +37,10 @@
           :src="project.img"
         >
           <div class="project-content-box">
-            <v-card-title class="project-title">
-              {{ project.title }}
-            </v-card-title>
+            <h3 class="project-title">
+              <span class="thinify">{{ project.thinTitle }}</span>
+              <span class="boldify">{{ project.boldTitle }}</span>
+            </h3>
             <div class="d-flex">
               <v-chip
                 v-for="tag in project.tags"
@@ -119,6 +120,7 @@ export default {
         background-color: rgba(0, 0, 0, 0.5);
         padding-bottom: 10px;
         .project-title {
+          font-size: 22px;
           padding: 10px 0 0 15px;
         }
         .project-type {

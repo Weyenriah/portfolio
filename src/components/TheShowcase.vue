@@ -8,9 +8,9 @@
     progress-color="#d00202"
   >
     <v-carousel-item
-      v-for="(item,i) in items"
-      :key="i"
-      :src="item.src"
+      v-for="(project) in p"
+      :key="project.id"
+      :src="project.img"
       reverse-transition="fade-transition"
       transition="fade-transition"
       color="black"
@@ -22,16 +22,23 @@
       >
         <v-row
           class="fill-height carousel-flex"
-          :class="item.diffAlignment"
           align="center"
         >
           <div class="d-flex flex-column carousel-container">
-            <p class="mb-0 carousel-type">{{ item.type }}</p>
+            <div class="d-flex">
+              <v-chip
+                v-for="tag in project.tags"
+                :key="tag"
+                class="carousel-type"
+              >
+                {{ tag }}
+              </v-chip>
+            </div>
             <h2>
-              <span class="thin">{{ item.thinTitle }}</span>{{ item.boldTitle }}
+              <span class="thin">{{ project.thinTitle }}</span>{{ project.boldTitle }}
             </h2>
-            <p>{{ item.shortDesc }}</p>
-            <a :href="item.link">Go to project</a>
+            <p> {{ project.excerpt }} </p>
+            <a>Go to project</a>
           </div>
         </v-row>
       </v-sheet>
@@ -40,40 +47,15 @@
 </template>
 
 <script>
+import { mapState } from 'vuex'
+
 export default {
   name: 'TheShowcase',
-  data () {
-    return {
-      items: [
-        {
-          src: require('../assets/orebro-katthem.jpg'),
-          thinTitle: 'Örebro',
-          boldTitle: ' Katthem',
-          type: 'website',
-          shortDesc: 'A responsive webpage with admin UI designed to match the workflow of the volunteers.',
-          link: '#',
-          diffAlignment: 'grid-align-right',
-        },
-        {
-          src: require('../assets/the-climate-report.jpg'),
-          thinTitle: 'The',
-          boldTitle: ' Climate Report',
-          type: 'game',
-          shortDesc: 'A game with the goal of highlighting different choices connected to climate change, in a fun and easy way.',
-          link: '#',
-          diffAlignment: 'grid-align-right',
-        },
-        {
-          src: require('../assets/the-penguin-company.jpg'),
-          thinTitle: 'The',
-          boldTitle: ' Penguin Company',
-          type: 'logotype',
-          shortDesc: 'A logotype designed for a mock-company that sells only penguin costumes.',
-          link: '#',
-          diffAlignment: 'grid-align-right',
-        },
-      ],
-    }
+  computed: {
+    p () {
+      return this.projects.filter((p) => p.showcase)
+    },
+    ...mapState(['projects']),
   },
 }
 </script>
@@ -92,10 +74,6 @@ export default {
       justify-content: center;
       .carousel-type {
         background-color: #d00202;
-        text-align: center;
-        border-radius: 3px;
-        font-weight: bold;
-        width: 50%;
       }
       h2 {
         .thin {
