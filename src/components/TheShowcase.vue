@@ -72,7 +72,7 @@ export default {
     display: flex;
     justify-content: flex-end;
     .carousel-container {
-      border-left: 10px solid $redify;
+      // border-left: 10px solid $redify;
       background-color: rgba(0,0,0,0.5);
       padding: 10px 50px 10px 40px;
       width: 50%;
@@ -96,7 +96,10 @@ export default {
           color: white;
           transition: all .5s;
           &:hover {
-            font-weight: bold;
+            // font-weight: bold;
+            .whiteify {
+              color: $redify !important;
+            }
           }
           i {
             font-size: 18px;

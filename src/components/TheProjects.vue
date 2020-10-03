@@ -41,7 +41,7 @@
               <span class="thinify">{{ project.thinTitle }}</span>
               <span class="boldify">{{ project.boldTitle }}</span>
             </h3>
-            <div class="d-flex">
+            <div class="d-flex project-chips">
               <v-chip
                 v-for="tag in project.tags"
                 :key="tag"
@@ -99,22 +99,20 @@ export default {
     color: white !important;
   }
   .filtered-projects-enter, .filtered-projects-leave-to {
-    height: 3px;
     opacity: 0;
   }
   .filtered-projects-enter-to, .filtered-projects-leave {
-    height: 100%;
     opacity: 1;
   }
   .filtered-projects-enter-active, .filtered-projects-leave-active {
-    transition: all 0.19s ease;
+    transition: all .12s ease;
   }
   .projects-grid {
     display: grid;
     grid-template-columns: calc(33% - 10px) calc(33% - 10px) calc(33% - 10px);
     gap: 15px;
     .project-image {
-      border-left: 10px solid $greenify;
+      border-left: 0 solid $greenify;
       transition: all .5s;
       .project-content-box {
         background-color: rgba(0, 0, 0, 0.5);
@@ -123,15 +121,23 @@ export default {
           font-size: 22px;
           padding: 10px 0 0 15px;
         }
-        .project-type {
-          text-align: center;
-          background-color: $greenify;
-          margin-left: 15px;
-          transition: all .5s;
+        .project-chips {
+          > :first-child {
+            margin-left: 15px;
+          }
+          > :not(:first-child) {
+            margin-left: 5px;
+          }
+          .project-type {
+            text-align: center;
+            background-color: $greenify;
+            transition: all .5s;
+          }
         }
       }
       &:hover {
-        border-left: 10px solid $hoverGreenify;
+        border-left: 15px solid $hoverGreenify;
+        transition: all .5s;
         .project-type {
           background-color: $hoverGreenify;
         }
