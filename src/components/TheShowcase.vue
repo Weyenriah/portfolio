@@ -25,25 +25,27 @@
           align="center"
         >
           <div class="d-flex flex-column carousel-container">
-            <div class="d-flex">
-              <v-chip
-                v-for="tag in project.tags"
-                :key="tag"
-                class="carousel-type"
-              >
-                {{ tag }}
-              </v-chip>
-            </div>
-            <h2>
-              <span class="thin">{{ project.thinTitle }}</span>{{ project.boldTitle }}
-            </h2>
-            <p> {{ project.excerpt }} </p>
-            <router-link :to="'project/' + project.slug">
-              <v-icon class="redify small-dots">fa-circle</v-icon>
-              <v-icon class="whiteify small-dots">fa-circle</v-icon>
-              <v-icon class="whiteify small-dots">fa-circle</v-icon>
-              Go to project
-            </router-link>
+            <section class="carousel-content">
+              <div class="d-flex">
+                <v-chip
+                  v-for="tag in project.tags"
+                  :key="tag"
+                  class="carousel-type"
+                >
+                  {{ tag }}
+                </v-chip>
+              </div>
+              <h2>
+                <span class="thin">{{ project.thinTitle }}</span>{{ project.boldTitle }}
+              </h2>
+              <p> {{ project.excerpt }} </p>
+              <router-link :to="'project/' + project.slug">
+                <v-icon class="redify small-dots">fa-circle</v-icon>
+                <v-icon class="whiteify small-dots">fa-circle</v-icon>
+                <v-icon class="whiteify small-dots">fa-circle</v-icon>
+                Go to project
+              </router-link>
+            </section>
           </div>
         </v-row>
       </v-sheet>
@@ -72,29 +74,33 @@ export default {
     .carousel-container {
       border-left: 10px solid $redify;
       background-color: rgba(0,0,0,0.5);
-      padding: 10px 50px 10px 20px;
+      padding: 10px 50px 10px 40px;
       width: 50%;
       transform: skewX(-5deg) translateX(30px);
       height: 100%;
       justify-content: center;
-      .carousel-type {
-        background-color: $redify;
-      }
-      h2 {
-        .thin {
-          font-weight: normal;
+      .carousel-content {
+        display: flex;
+        flex-direction: column;
+        width: 90%;
+        .carousel-type {
+          background-color: $redify;
         }
-      }
-      a {
-        text-decoration: none;
-        color: white;
-        transition: all .5s;
-        text-align: right;
-        &:hover {
-          font-weight: bold;
+        h2 {
+          .thin {
+            font-weight: normal;
+          }
         }
-        i {
-          font-size: 18px;
+        a {
+          text-decoration: none;
+          color: white;
+          transition: all .5s;
+          &:hover {
+            font-weight: bold;
+          }
+          i {
+            font-size: 18px;
+          }
         }
       }
     }
@@ -103,6 +109,7 @@ export default {
     .carousel-flex {
       .carousel-container {
         width: 90%;
+        padding-left: 20px;
       }
     }
   }
