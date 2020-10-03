@@ -39,6 +39,9 @@
             </h2>
             <p> {{ project.excerpt }} </p>
             <router-link :to="'project/' + project.slug">
+              <v-icon class="redify small-dots">fa-circle</v-icon>
+              <v-icon class="whiteify small-dots">fa-circle</v-icon>
+              <v-icon class="whiteify small-dots">fa-circle</v-icon>
               Go to project
             </router-link>
           </div>
