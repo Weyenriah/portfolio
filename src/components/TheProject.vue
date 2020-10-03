@@ -2,7 +2,8 @@
   <div class="project-outer-container">
     <v-img
       :src="project.img"
-      height="300px"
+      height="200px"
+      class="header-img"
     ></v-img>
     <v-container>
       <v-sheet class="project-inner-container">
@@ -12,7 +13,7 @@
               <span class="thinify">{{ project.thinTitle }}</span> {{ project.boldTitle }}
             </h2>
             <div>
-              <v-icon class="redify big-dots">fa-circle</v-icon>
+              <v-icon class="greenify big-dots">fa-circle</v-icon>
               <v-icon class="greyify big-dots">fa-circle</v-icon>
               <v-icon class="greyify big-dots">fa-circle</v-icon>
             </div>
@@ -21,12 +22,16 @@
             <v-chip
               v-for="tag in project.tags"
               :key="tag"
+              class="project-chip"
             >
               {{ tag }}
             </v-chip>
           </div>
           <div class="mt-2">
-            <p>{{ project.excerpt }}</p>
+            <p>
+              {{ project.excerpt }} {{ project.longerDesc }}
+              <q class="quote">{{ project.quote }}</q>
+            </p>
           </div>
         </div>
         <v-img
@@ -62,6 +67,9 @@ export default {
 <style lang="scss" scoped>
   .project-outer-container {
     padding: 0;
+    .header-img {
+      border-bottom: 4px solid $redify;
+    }
     .project-inner-container {
       display: grid;
       grid-template-columns: 50% 50%;
@@ -71,6 +79,16 @@ export default {
           > :not(:first-child) {
             margin-left: 5px;
           }
+          .project-chip {
+            color: white;
+            background-color: $greenify;
+          }
+        }
+        .quote {
+          font-size: 20px;
+          float: right;
+          font-weight: bold;
+          color: $greenify;
         }
       }
       .project-img {
@@ -78,7 +96,7 @@ export default {
         grid-row: 1 / span 5;
         .nested-img {
           position: relative;
-          left: 12.7%;
+          left: 12.8%;
           top: 11%;
         }
       }

@@ -9,6 +9,7 @@ export default [
     compImg: require('../assets/images/computer.jpg'),
     showcase: true,
     excerpt: 'A responsive webpage with admin UI designed to match the workflow of the volunteers.',
+    longerDesc: '',
   },
   {
     id: 2,
@@ -20,6 +21,7 @@ export default [
     compImg: require('../assets/images/computer.jpg'),
     showcase: true,
     excerpt: 'A game with the goal of highlighting different choices connected to climate change, in a fun and easy way.',
+    longerDesc: '',
   },
   {
     id: 3,
@@ -31,6 +33,12 @@ export default [
     compImg: require('../assets/images/computer.jpg'),
     showcase: true,
     excerpt: 'A logotype designed for a mock-company that sells only penguin costumes.',
+    longerDesc: 'Yeah, you heard that right! This project was made for ' +
+      'an assignment during my studies at Kristianstad University. My primary goal was to have fun, just pure fun, and with some ' +
+      'inspiration from one very famous lion (aka. Metro Goldwyn Mayers (MGM) logo) I went to work. ' +
+      'The logotype is made in Illustrator and has, ofcourse, a black/white version and an inverted black/white version - for maximum use. ' +
+      'I got pleasantly surprised by the result, and decided that it would be one of my showcase projects.',
+    quote: 'One has to just have fun sometimes, and this is the result.',
   },
   {
     id: 4,
@@ -42,6 +50,7 @@ export default [
     compImg: require('../assets/images/computer.jpg'),
     showcase: false,
     excerpt: '',
+    longerDesc: '',
   },
   {
     id: 5,
@@ -53,5 +62,6 @@ export default [
     compImg: require('../assets/images/computer.jpg'),
     showcase: false,
     excerpt: '',
+    longerDesc: '',
   },
 ]
