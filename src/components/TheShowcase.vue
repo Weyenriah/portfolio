@@ -26,7 +26,7 @@
         >
           <div class="d-flex flex-column carousel-container">
             <section class="carousel-content">
-              <div class="d-flex">
+              <div class="d-flex carousel-types">
                 <v-chip
                   v-for="tag in project.tags"
                   :key="tag"
@@ -83,9 +83,16 @@ export default {
         display: flex;
         flex-direction: column;
         width: 90%;
-        .carousel-type {
-          background-color: $redify;
+        .carousel-types {
+          > :not(:first-child) {
+            margin-left: 5px;
+          }
+          .carousel-type {
+            background-color: $redify;
+
+          }
         }
+
         h2 {
           .thin {
             font-weight: normal;
