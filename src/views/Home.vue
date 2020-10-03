@@ -2,7 +2,7 @@
   <div class="home">
     <TheShowcase/>
     <TheProjects/>
-    <v-divider></v-divider>
+    <v-divider/>
     <TheAboutMe/>
   </div>
 </template>

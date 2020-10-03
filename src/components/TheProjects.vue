@@ -27,7 +27,7 @@
       <v-card
         dark
         tile
-        :to="project.to"
+        :to="'project/' + project.id"
         v-for="(project) in p"
         :key="project.id"
       >
