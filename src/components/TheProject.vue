@@ -166,5 +166,8 @@ export default {
       flex-direction: column-reverse;
       align-items: flex-start !important;
     }
+    .quote {
+      width: 100% !important;
+    }
   }
 </style>
