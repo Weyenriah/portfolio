@@ -92,6 +92,7 @@ export default {
         margin: 15px;
         color: white;
         text-decoration: none;
+        width: fit-content;
         &:hover {
           .whiteify {
             color: $redify !important;
