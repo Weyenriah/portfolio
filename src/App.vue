@@ -26,6 +26,9 @@ export default {
 </script>
 
 <style lang="scss">
+  h1, h2, h3, p, .typography-nav {
+    font-family: "Verdana", sans-serif;
+  }
   #projects, #about-me {
     margin-top: 20px;
     margin-bottom: 20px;
