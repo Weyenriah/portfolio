@@ -29,8 +29,9 @@
           </div>
           <div class="mt-2">
             <p>
-              <span class="boldify">{{ project.excerpt }}</span> {{ project.longerDesc }}
               <q class="quote">{{ project.quote }}</q>
+              <span class="boldify">{{ project.excerpt }}</span> {{ project.longerDesc }}
+
             </p>
             <a
               v-if="project.link != ''"
@@ -40,7 +41,7 @@
               <v-icon class="greenify small-dots">fa-circle</v-icon>
               <v-icon class="greyify small-dots">fa-circle</v-icon>
               <v-icon class="greyify small-dots">fa-circle</v-icon>
-              Se projektet live!
+              See the project live!
             </a>
           </div>
         </div>
@@ -95,6 +96,7 @@ export default {
           }
         }
         .quote {
+          width: 40%;
           font-size: 23px;
           float: right;
           text-align: right;
@@ -102,6 +104,7 @@ export default {
           color: $greenify;
         }
         a {
+          width: 100%;
           text-decoration: none;
           color: black;
           transition: all .5s;
@@ -139,7 +142,7 @@ export default {
       }
     }
   }
-  @media only screen and (max-width: 430px) {
+  @media only screen and (max-width: 450px) {
     .project-title {
       flex-direction: column-reverse;
       align-items: flex-start !important;
