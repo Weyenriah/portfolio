@@ -1,12 +1,9 @@
 <template>
   <v-footer
-    absolute
     padless
   >
-    <v-card class="d-flex justify-center align-center"
-      color="#0957bd"
+    <v-card class="d-flex justify-center align-center over-footer"
       width="100%"
-      dark
       tile
     >
       <div class="footer-buttons d-flex justify-space-between">
@@ -21,15 +18,15 @@
         </v-btn>
       </div>
     </v-card>
-    <v-card class="text-center"
-      color="black"
+    <v-card class="text-center lower-footer"
       width="100%"
       flat
-      dark
       tile
     >
       <v-card-text class="footer-information">
-        <v-icon small style="margin-top: -4px;"> far fa-copyright</v-icon> {{ new Date().getFullYear() }} <strong>Felicia Wallin</strong>
+        <v-icon small style="margin-top: -4px;"> far fa-copyright</v-icon>
+        {{ new Date().getFullYear() }}
+        <strong>Felicia Wallin</strong>
       </v-card-text>
     </v-card>
   </v-footer>
@@ -49,7 +46,13 @@ export default {
 </script>
 
 <style lang="scss" scoped>
-  .footer-buttons {
-    width: 30%;
+  .over-footer {
+    background-color: $light-stone !important;
+    .footer-buttons {
+      width: 30%;
+    }
+  }
+  .lower-footer {
+    background-color: $stone !important;
   }
 </style>
