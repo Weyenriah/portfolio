@@ -79,6 +79,7 @@ export default {
       padding: 10px 50px 10px 40px;
       width: 50%;
       transform: skewX(-5deg) translateX(30px);
+      transition: width .5s;
       height: 100%;
       justify-content: center;
       .carousel-content {

@@ -2,7 +2,6 @@
   <v-footer
     absolute
     padless
-    class="d-flex flex-column"
   >
     <v-card class="d-flex justify-center align-center"
       color="#0957bd"
