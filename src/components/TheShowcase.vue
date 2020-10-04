@@ -27,13 +27,15 @@
           <div class="d-flex flex-column carousel-container">
             <section class="carousel-content">
               <div class="d-flex carousel-types">
-                <v-chip
-                  v-for="tag in project.tags"
-                  :key="tag"
-                  class="carousel-type"
-                >
-                  {{ tag }}
-                </v-chip>
+                <v-chip-group>
+                  <v-chip
+                    v-for="tag in project.tags"
+                    :key="tag"
+                    class="carousel-type"
+                  >
+                    {{ tag }}
+                  </v-chip>
+                </v-chip-group>
               </div>
               <h2>
                 <span class="thin">{{ project.thinTitle }}</span>{{ project.boldTitle }}

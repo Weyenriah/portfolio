@@ -42,13 +42,15 @@
               <span class="boldify">{{ project.boldTitle }}</span>
             </h3>
             <div class="d-flex project-chips">
-              <v-chip
-                v-for="tag in project.tags"
-                :key="tag"
-                class="project-type"
-              >
-                {{ tag }}
-              </v-chip>
+              <v-chip-group>
+                <v-chip
+                  v-for="tag in project.tags"
+                  :key="tag"
+                  class="project-type"
+                >
+                  {{ tag }}
+                </v-chip>
+              </v-chip-group>
             </div>
           </div>
         </v-img>

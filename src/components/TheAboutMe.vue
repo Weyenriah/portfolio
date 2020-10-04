@@ -15,7 +15,7 @@
           <v-icon class="big-dots blueify">fa-circle</v-icon>
         </h2>
         <p>
-          Text about me
+          Text about myself
         </p>
       </v-card>
       <v-img class="about-me-pic" max-width="40%" :src="require('../assets/images/picture-felicia-wallin.png')"/>
