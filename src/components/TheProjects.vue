@@ -2,9 +2,6 @@
   <v-container id="projects">
     <h2 class="main-h">
       pro<span class="thinify">jects</span>
-      <v-icon class="big-dots greyify">fa-circle</v-icon>
-      <v-icon class="big-dots greenify">fa-circle</v-icon>
-      <v-icon class="big-dots greyify">fa-circle</v-icon>
     </h2>
     <v-chip-group
       multiple
@@ -12,6 +9,7 @@
     >
       <v-chip
         active-class="chip-active"
+        class="availableChips"
         :value="tag"
         v-for="tag in availableTags"
         :key="tag"
@@ -36,12 +34,12 @@
           height="100%"
           :src="project.img"
         >
-          <div class="project-content-box">
+          <article class="project-content-box">
             <h3 class="project-title">
               <span class="thinify">{{ project.thinTitle }}</span>
               <span class="boldify">{{ project.boldTitle }}</span>
             </h3>
-            <div class="d-flex project-chips">
+            <section class="d-flex project-chips">
               <v-chip-group>
                 <v-chip
                   v-for="tag in project.tags"
@@ -51,8 +49,8 @@
                   {{ tag }}
                 </v-chip>
               </v-chip-group>
-            </div>
-          </div>
+            </section>
+          </article>
         </v-img>
       </v-card>
     </transition-group>
@@ -97,8 +95,11 @@ export default {
 
 <style lang="scss" scoped>
   .chip-active {
-    background-color: #059809;
+    background-color: $accent;
     color: white !important;
+  }
+  .availableChips {
+    height: 24px;
   }
   .filtered-projects-enter, .filtered-projects-leave-to {
     opacity: 0;
@@ -114,7 +115,7 @@ export default {
     grid-template-columns: calc(33% - 10px) calc(33% - 10px) calc(33% - 10px);
     gap: 15px;
     .project-image {
-      border-left: 0 solid $greenify;
+      border-left: 0 solid $accent;
       transition: all .5s;
       .project-content-box {
         background-color: rgba(0, 0, 0, 0.5);
@@ -132,16 +133,17 @@ export default {
           }
           .project-type {
             text-align: center;
-            background-color: $greenify;
+            background-color: $accent;
             transition: all .5s;
+            height: 24px;
           }
         }
       }
       &:hover {
-        border-left: 15px solid $hoverGreenify;
+        border-left: 10px solid $accent;
         transition: all .5s;
         .project-type {
-          background-color: $hoverGreenify;
+          background-color: $accent;
         }
       }
     }
