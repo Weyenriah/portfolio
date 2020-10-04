@@ -10,9 +10,6 @@
       >
         <h2 class="main-h">
           <span class="thinify">about</span> me
-          <v-icon class="big-dots greyify">fa-circle</v-icon>
-          <v-icon class="big-dots greyify">fa-circle</v-icon>
-          <v-icon class="big-dots blueify">fa-circle</v-icon>
         </h2>
         <p>
           Text about myself
@@ -35,7 +32,7 @@ export default {
     .container {
       padding: 0 12px;
       .about-me-pic {
-        border-left: 15px solid $blueify;
+        border-left: 15px solid $accent;
       }
     }
   }
