@@ -4,7 +4,14 @@
       :src="project.img"
       height="200px"
       class="header-img"
-    ></v-img>
+    >
+      <router-link class="go-back" to="/">
+        <v-icon class="redify small-dots">fa-circle</v-icon>
+        <v-icon class="whiteify small-dots">fa-circle</v-icon>
+        <v-icon class="whiteify small-dots">fa-circle</v-icon>
+        Go back
+      </router-link>
+    </v-img>
     <v-container>
       <v-sheet class="project-inner-container">
         <div class="text-based-content">
@@ -80,6 +87,17 @@ export default {
     padding: 0;
     .header-img {
       border-bottom: 4px solid $redify;
+      .go-back {
+        display: block;
+        margin: 15px;
+        color: white;
+        text-decoration: none;
+        &:hover {
+          .whiteify {
+            color: $redify !important;
+          }
+        }
+      }
     }
     .project-inner-container {
       display: grid;
