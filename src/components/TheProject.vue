@@ -32,6 +32,16 @@
               <span class="boldify">{{ project.excerpt }}</span> {{ project.longerDesc }}
               <q class="quote">{{ project.quote }}</q>
             </p>
+            <a
+              v-if="project.link != ''"
+              :href="project.link"
+              target="_blank"
+            >
+              <v-icon class="greenify small-dots">fa-circle</v-icon>
+              <v-icon class="greyify small-dots">fa-circle</v-icon>
+              <v-icon class="greyify small-dots">fa-circle</v-icon>
+              Se projektet live!
+            </a>
           </div>
         </div>
         <v-img
@@ -90,6 +100,20 @@ export default {
           text-align: right;
           font-weight: bold;
           color: $greenify;
+        }
+        a {
+          text-decoration: none;
+          color: black;
+          transition: all .5s;
+          &:hover {
+            // font-weight: bold;
+            .greyify {
+              color: $greenify !important;
+            }
+          }
+          i {
+            font-size: 18px;
+          }
         }
       }
       .project-img {

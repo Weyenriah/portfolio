@@ -10,6 +10,8 @@ export default [
     showcase: true,
     excerpt: 'A responsive webpage with admin UI designed to match the workflow of the volunteers.',
     longerDesc: '',
+    quote: '',
+    link: 'https://orebrokatthem.com/',
   },
   {
     id: 2,
@@ -22,6 +24,8 @@ export default [
     showcase: true,
     excerpt: 'A game with the goal of highlighting different choices connected to climate change, in a fun and easy way.',
     longerDesc: '',
+    quote: '',
+    link: 'https://game.wallin.design/',
   },
   {
     id: 3,
@@ -39,6 +43,7 @@ export default [
       'The logotype is made in Illustrator and has, ofcourse, a black/white version and an inverted black/white version - for maximum use. ' +
       'I got pleasantly surprised by the result, and decided that it would be one of my showcase projects.',
     quote: 'One has to just have fun sometimes, and this is the result.',
+    link: '',
   },
   {
     id: 4,
@@ -51,6 +56,8 @@ export default [
     showcase: false,
     excerpt: '',
     longerDesc: '',
+    quote: '',
+    link: '',
   },
   {
     id: 5,
@@ -63,5 +70,7 @@ export default [
     showcase: false,
     excerpt: '',
     longerDesc: '',
+    quote: '',
+    link: 'https://mobilatrygghetslarm.se/',
   },
 ]
