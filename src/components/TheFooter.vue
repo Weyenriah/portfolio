@@ -1,8 +1,12 @@
 <template>
-  <footer>
+  <v-footer
+    absolute
+    padless
+    class="d-flex flex-column"
+  >
     <v-card class="d-flex justify-center align-center"
       color="#0957bd"
-      height="40px"
+      width="100%"
       dark
       tile
     >
@@ -20,6 +24,7 @@
     </v-card>
     <v-card class="text-center"
       color="black"
+      width="100%"
       flat
       dark
       tile
@@ -28,7 +33,7 @@
         <v-icon small style="margin-top: -4px;"> far fa-copyright</v-icon> {{ new Date().getFullYear() }} <strong>Felicia Wallin</strong>
       </v-card-text>
     </v-card>
-  </footer>
+  </v-footer>
 </template>
 
 <script>
