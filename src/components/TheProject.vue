@@ -35,11 +35,11 @@
           </div>
         </div>
         <v-img
-          :src="project.compImg"
+          :src="require('../assets/images/computer.jpg')"
           class="project-img"
         >
           <v-img
-            :src="project.img"
+            :src="project.compImg"
             class="nested-img"
             width="74%"
           >
