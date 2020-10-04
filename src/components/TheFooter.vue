@@ -1,8 +1,11 @@
 <template>
   <v-footer
     padless
+    absolute
+    height="40"
+    color="white"
   >
-    <v-card class="d-flex justify-center align-center over-footer"
+    <v-card class="d-flex justify-center align-center over-footer mt-8"
       width="100%"
       tile
     >
