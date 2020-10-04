@@ -85,8 +85,9 @@ export default {
           }
         }
         .quote {
-          font-size: 20px;
+          font-size: 23px;
           float: right;
+          text-align: right;
           font-weight: bold;
           color: $greenify;
         }
@@ -112,6 +113,12 @@ export default {
         grid-column: 1 !important;
         grid-row: auto !important;
       }
+    }
+  }
+  @media only screen and (max-width: 430px) {
+    .project-title {
+      flex-direction: column-reverse;
+      align-items: flex-start !important;
     }
   }
 </style>
