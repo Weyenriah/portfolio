@@ -1,10 +1,6 @@
 <template>
   <div>
-    <v-img
-      :src="project.img"
-      height="100px"
-      class="header-img"
-    />
+    <TheProjectImage/>
     <v-container class="project-inner-container">
       <v-sheet class="text-based-content">
         <section class="d-flex align-center project-title">
@@ -21,14 +17,6 @@
         <section>
           {{ project.excerpt }}
         </section>
-        <section>
-          <v-sheet
-            class="process-bubble"
-            width="50%"
-          >
-            <p>Text</p>
-          </v-sheet>
-        </section>
         <section class="mt-4 go-to-project">
           <v-btn
             v-if="project.link != ''"
@@ -40,8 +28,8 @@
             See the project live!
           </v-btn>
         </section>
+        <TheProjectProcessFlow/>
       </v-sheet>
-      <TheProjectImage/>
     </v-container>
   </div>
 </template>
@@ -52,10 +40,12 @@ import TheProjectRoles from './TheProjectRoles'
 import TheProjectTechniques from './TheProjectTechniques'
 import TheProjectTagGroups from './TheProjectTagGroups'
 import TheProjectImage from './TheProjectImage'
+import TheProjectProcessFlow from './TheProjectProcessFlow'
 
 export default {
   name: 'TheProject',
   components: {
+    TheProjectProcessFlow,
     TheProjectImage,
     TheProjectTagGroups,
     TheProjectTechniques,
@@ -95,7 +85,7 @@ export default {
   }
   .project-inner-container {
     display: grid;
-    grid-template-columns: 50% 50%;
+    grid-template-columns: 100%;
     .text-based-content {
       grid-column: 1;
       .go-to-project {

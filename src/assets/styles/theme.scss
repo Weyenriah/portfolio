@@ -1,42 +1,11 @@
-$accent: #0edcdc;
+$accent: #1cbfbf;
+$lighter-stone: #f7f7f7;
 $light-stone: #e7e7e7;
 $stone: #dbdbdb;
-
-
-$redify: #1ec1c1;
-$blueify: #1ec1c1;
-$greenify: #1ec1c1;
-$hoverGreenify: #1ec1c1;
-$whiteify: rgba(255,255,255,0.2);
-$greyify: rgba(0, 0, 0, 0.1);
 
 h2 {
   font-size: 32px;
   font-weight: bolder;
-}
-.big-dots {
-  font-size: 18px;
-  margin-left: 5px;
-}
-.small-dots {
-  margin-top: -4px;
-  margin-left: 5px;
-  font-size: 15px;
-}
-.redify {
-  color: $redify !important;
-}
-.greenify {
-  color: $greenify !important;
-}
-.blueify {
-  color: $blueify !important;
-}
-.greyify {
-  color: $greyify !important;
-}
-.whiteify {
-  color: $whiteify !important;
 }
 .boldify {
   font-weight: bolder;

@@ -3,7 +3,7 @@
     padless
     absolute
     height="40"
-    color="white"
+    color="transparent"
   >
     <v-card class="d-flex justify-center align-center over-footer mt-8"
       width="100%"
