@@ -14,6 +14,7 @@
       reverse-transition="fade-transition"
       transition="fade-transition"
       color="black"
+      eager
     >
       <v-sheet
         color="transparent"
