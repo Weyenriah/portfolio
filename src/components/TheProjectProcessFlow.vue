@@ -5,51 +5,26 @@
       :key="i"
     >
       <article
-        class="d-flex flex-row-reverse mt-2 mb-2"
-        v-if="i % 2 === 1 && i < project.flow.length - 1"
-      >
-        <v-sheet
-          class="process-bubbles pa-2 d-flex align-center justify-center"
-          width="50%"
-          rounded
-        >
-          <p class="ma-0">{{ bubble }}</p>
-        </v-sheet>
-        <v-sheet
-          width="15%"
-          height="20px"
-          class="align-self-end lines-left"
-        >
-        </v-sheet>
-      </article>
-      <article
         class="d-flex mt-2 mb-2"
-        v-else-if="i % 2 === 0 && i < project.flow.length - 1"
+        :class="{
+          left: i % 2 === 0 && i < project.flow.length - 1, // Even indexes
+          right: i % 2 === 1 && i < project.flow.length - 1, // Odd indexes
+          lastLeft: i === project.flow.length - 1 && i % 2 === 0, // Last if even
+          lastRight: i === project.flow.length - 1 && i % 2 === 1, // Last if odd
+        }"
       >
         <v-sheet
           class="process-bubbles pa-2 d-flex align-center justify-center"
           width="50%"
           rounded
         >
-          <p class="ma-0">{{ bubble }}</p>
+          <p class="ma-0">{{ bubble }} {{ i }}</p>
         </v-sheet>
         <v-sheet
           width="15%"
           height="20px"
-          class="align-self-end lines-right"
+          class="align-self-end lines"
         >
-        </v-sheet>
-      </article>
-      <article
-        class="d-flex flex-row mt-2 mb-2"
-        v-else-if="i === project.flow.length - 1"
-      >
-        <v-sheet
-          class="process-bubbles pa-2 d-flex align-center justify-center"
-          width="50%"
-          rounded
-        >
-          <p class="ma-0">{{ bubble }}</p>
         </v-sheet>
       </article>
     </div>
@@ -78,13 +53,54 @@ export default {
       word-break: break-word;
       text-align: center;
     }
-    .lines-left {
-      border-top: 1px solid $stone;
-      border-left: 1px solid $stone;
+    .left {
+      flex-direction: row;
+      .lines {
+        border-top: 1px solid $stone;
+        border-right: 1px solid $stone;
+        &:after {
+          font-family: "Font Awesome 5 Free";
+          font-weight: 900;
+          content: "\f0d7";
+          color: $stone;
+          margin-left: 6px;
+          width: 100%;
+          height: 150%;
+          display: flex;
+          align-items: flex-end;
+          justify-content: flex-end;
+        }
+      }
     }
-    .lines-right {
-      border-top: 1px solid $stone;
-      border-right: 1px solid $stone;
+    .right {
+      flex-direction: row-reverse;
+      .lines {
+        border-top: 1px solid $stone;
+        border-left: 1px solid $stone;
+        &:after {
+          font-family: "Font Awesome 5 Free";
+          font-weight: 900;
+          content: "\f0d7";
+          color: $stone;
+          margin-left: -6px;
+          width: 100%;
+          height: 150%;
+          display: flex;
+          align-items: flex-end;
+        }
+      }
+    }
+    .lastLeft {
+      align-self: flex-end;
+      .lines {
+        display: none;
+      }
+    }
+    .lastRight {
+      justify-content: flex-end;
+      .lines {
+        display: none;
+      }
     }
   }
 </style>
