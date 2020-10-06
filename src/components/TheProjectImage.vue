@@ -21,7 +21,6 @@
     max-width="60%"
     eager
   >
-
   </v-img>
 </template>
 
