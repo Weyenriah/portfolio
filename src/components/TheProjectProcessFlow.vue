@@ -7,10 +7,9 @@
       <article
         class="d-flex mt-2 mb-2"
         :class="{
-          left: i % 2 === 0 && i < project.flow.length - 1, // Even indexes
-          right: i % 2 === 1 && i < project.flow.length - 1, // Odd indexes
-          lastLeft: i === project.flow.length - 1 && i % 2 === 0, // Last if even
-          lastRight: i === project.flow.length - 1 && i % 2 === 1, // Last if odd
+          left: i % 2 === 0, // Even indexes
+          right: i % 2 === 1, // Odd indexes
+          last: i === project.flow.length - 1, // Last
         }"
       >
         <v-sheet
@@ -90,14 +89,13 @@ export default {
         }
       }
     }
-    .lastLeft {
-      align-self: flex-end;
-      .lines {
-        display: none;
+    .last {
+      &right {
+        justify-content: flex-end;
       }
-    }
-    .lastRight {
-      justify-content: flex-end;
+      &left {
+        align-self: flex-end;
+      }
       .lines {
         display: none;
       }
