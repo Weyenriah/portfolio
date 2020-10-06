@@ -18,6 +18,7 @@
            user testing and the users perspective to be a natural part of the process, as well as good written code.
            I strive to show this through how I work and the result of the work.
         </p>
+        <v-divider class="mb-4"/>
         <v-sheet class="d-flex flex-wrap">
           <p class="boldify mr-9 mb-0">Skills</p>
           <div
