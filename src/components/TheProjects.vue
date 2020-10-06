@@ -26,6 +26,7 @@
         dark
         tile
         :to="'project/' + project.slug"
+        @click.native="scrollToTop ()"
         v-for="(project) in p"
         :key="project.id"
       >
@@ -65,6 +66,11 @@ export default {
   data: () => ({
     selectedTags: [],
   }),
+  methods: {
+    scrollToTop () {
+      window.scrollTo(0, 0)
+    },
+  },
   computed: {
     p () {
       return this.projects.filter((o) => {

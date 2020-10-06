@@ -11,8 +11,6 @@
       v-for="(project) in p"
       :key="project.id"
       :src="project.img"
-      reverse-transition="fade-transition"
-      transition="fade-transition"
       color="black"
       eager
     >
