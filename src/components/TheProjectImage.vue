@@ -16,9 +16,9 @@
   </v-img>
   <v-img
     :src="project.compImg"
-    class="project-img mt-4"
+    class="project-img mt-4 not-web"
     v-else
-    max-width="60%"
+    max-width="40%"
     eager
   >
   </v-img>
@@ -54,6 +54,14 @@ export default {
       max-width: 90% !important;
       grid-column: 1 !important;
       grid-row: auto !important;
+    }
+    .not-web {
+      max-width: 70% !important;
+    }
+  }
+  @media only screen and (max-width: 500px) {
+    .not-web {
+      max-width: 90% !important;
     }
   }
 </style>

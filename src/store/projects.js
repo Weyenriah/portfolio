@@ -70,7 +70,7 @@ export default [
       'Finessing',
     ],
     img: require('../assets/images/the-penguin-company.jpg'),
-    compImg: require('../assets/images/small-the-penguin-company.jpg'),
+    compImg: require('../assets/images/show-the-penguin-company.jpg'),
     showcase: true,
     excerpt: 'A logotype designed for a mock-company that sells only penguin costumes.',
     longerDesc: 'Yeah, you heard that right! This project was made for ' +
@@ -90,7 +90,7 @@ export default [
     roles: ['Graphic Designer'],
     techniques: ['Illustrator'],
     img: require('../assets/images/fw-logo.jpg'),
-    compImg: require('../assets/images/small-f-w.jpg'),
+    compImg: require('../assets/images/show-fw-logo.jpg'),
     flow: [
       'Brainstorming and sketching',
       'Brainstorm the main idea',
