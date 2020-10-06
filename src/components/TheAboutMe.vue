@@ -15,7 +15,7 @@
         <p>
           Designing through the users perspective and code it, that's what I'm all about. To keep it short,
            I have dedicated a huge part of my life to make the gap between UX and frontend smaller, wherever I go. I want
-           user testing and the users perspective to be a natural part of the process, as well as code written code.
+           user testing and the users perspective to be a natural part of the process, as well as good written code.
            I strive to show this through how I work and the result of the work.
         </p>
         <v-sheet class="d-flex flex-wrap">
