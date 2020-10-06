@@ -1,7 +1,7 @@
 <template>
   <v-img
     :src="require('../assets/images/computer.jpg')"
-    class="project-img"
+    class="project-img mt-4"
     v-if="project.focus === 'web'"
     max-width="60%"
     eager
@@ -13,6 +13,15 @@
       eager
     >
     </v-img>
+  </v-img>
+  <v-img
+    :src="project.compImg"
+    class="project-img mt-4"
+    v-else
+    max-width="60%"
+    eager
+  >
+
   </v-img>
 </template>
 
