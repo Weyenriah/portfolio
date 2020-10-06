@@ -18,7 +18,7 @@
           width="50%"
           rounded
         >
-          <p class="ma-0">{{ bubble }} {{ i }}</p>
+          <p class="ma-0">{{ bubble }}</p>
         </v-sheet>
         <v-sheet
           width="15%"
