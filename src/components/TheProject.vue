@@ -61,28 +61,6 @@ export default {
 </script>
 
 <style lang="scss" scoped>
-  .header-img {
-    border-bottom: 4px solid $accent;
-    .go-back-container {
-      background-color: rgba(0,0,0,0.5);
-      width: 40%;
-      height: 100%;
-      padding: 10px 30px;
-      transform: skewX(-10deg) translateX(-30px);
-      transition: width .5s;
-      .go-back {
-        display: block;
-        width: fit-content;
-        color: white;
-        text-decoration: none;
-      }
-    }
-    @media only screen and (max-width: 560px) {
-      .go-back-container {
-        width: 90%;
-      }
-    }
-  }
   .project-inner-container {
     display: grid;
     grid-template-columns: 100%;
@@ -90,6 +68,14 @@ export default {
       grid-column: 1;
       .go-to-project {
         text-align: right;
+        a {
+          background-color: $dark-accent !important;
+          color: white;
+          transition: all .5s;
+          &:hover {
+            background-color: $accent !important;
+          }
+        }
       }
     }
   }
