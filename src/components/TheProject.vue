@@ -19,13 +19,13 @@
         </section>
         <section class="mt-4 go-to-project">
           <v-btn
-            v-if="project.link != ''"
+            v-if="project.link !== ''"
             depressed
             small
-            :href="project.link"
+            :href="project.link.url"
             target="_blank"
           >
-            See the project live!
+            {{ project.link.title }}
           </v-btn>
         </section>
         <TheProjectProcessFlow/>
