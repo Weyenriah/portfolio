@@ -1,6 +1,6 @@
 <template>
   <v-img
-    :src="require('../assets/images/computer.jpg')"
+    :src="require('../../assets/images/computer.jpg')"
     class="project-img mt-4"
     v-if="project.focus === 'web'"
     max-width="60%"

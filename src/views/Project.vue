@@ -4,7 +4,7 @@
 
 <script>
 // @ is an alias to /src
-import TheProject from '../components/TheProject'
+import TheProject from '../components/project/TheProject'
 
 export default {
   name: 'Project',

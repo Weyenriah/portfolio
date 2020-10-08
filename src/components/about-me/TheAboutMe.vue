@@ -36,7 +36,7 @@
           </div>
         </v-sheet>
       </v-card>
-      <v-img class="about-me-pic" max-width="40%" :src="require('../assets/images/picture-felicia-wallin.png')"/>
+      <v-img class="about-me-pic" max-width="40%" :src="require('../../assets/images/big/picture-felicia-wallin.png')"/>
     </v-container>
   </v-container>
 </template>

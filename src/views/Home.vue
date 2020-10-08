@@ -9,9 +9,9 @@
 
 <script>
 // @ is an alias to /src
-import TheShowcase from '../components/TheShowcase'
-import TheProjects from '../components/TheProjects.vue'
-import TheAboutMe from '../components/TheAboutMe'
+import TheShowcase from '../components/showcase/TheShowcase'
+import TheProjects from '../components/projects/TheProjects.vue'
+import TheAboutMe from '../components/about-me/TheAboutMe'
 
 export default {
   name: 'Home',
