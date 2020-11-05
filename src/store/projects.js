@@ -201,7 +201,7 @@ export default [
     },
   },
   {
-    id: 7,
+    id: 8,
     slug: 'lifeconcern',
     thinTitle: 'Scholander ',
     boldTitle: 'LifeConcern AB',
