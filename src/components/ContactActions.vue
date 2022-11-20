@@ -55,7 +55,7 @@ export default {
     box-shadow: 0 0.125rem 0.625rem rgba(0, 0, 0, 0.25);
 
     i {
-      color: $light-main-color;
+      color: $white;
       font-size: 1rem;
       transition: all .3s ease-in-out;
     }

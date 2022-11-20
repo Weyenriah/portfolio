@@ -51,6 +51,7 @@ export default {
     text-transform: uppercase;
     font-weight: bold;
     transition: $main-transition;
+    letter-spacing: 1px;
 
     &:hover {
       color: $light-purple;

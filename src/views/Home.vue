@@ -15,17 +15,35 @@
             Wanna create something <span class="purple-text">amazing</span> together?
           </h1>
 
-          <a
-            class="btn btn--outline-purple"
-            href="/"
-          >
-            Contact me!
-          </a>
+          <div class="header__btns">
+            <a
+              class="btn btn--purple"
+              href="/"
+            >
+              Contact me!
+            </a>
+
+            <a
+              class="btn btn--outline-purple"
+              href="#projects"
+            >
+              See what I can do!
+            </a>
+          </div>
         </section>
       </div>
     </header>
 
     <Projects/>
+
+    <article>
+      <img src="" alt="">
+
+      <section>
+        <h2></h2>
+        <p></p>
+      </section>
+    </article>
   </div>
 </template>
 
@@ -100,6 +118,11 @@ export default {
     }
   }
 
+  &__btns {
+    display: flex;
+    gap: 1rem;
+  }
+
   @include tablet-up {
     margin: 0 70px 0 70px;
 
@@ -133,6 +156,12 @@ export default {
         color: $dark-background;
       }
     }
+  }
+
+  &--purple {
+    background-color: $light-purple;
+    border: 3px solid $light-purple;
+    color: $dark-background;
   }
 }
 </style>
