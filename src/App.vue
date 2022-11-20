@@ -1,20 +1,14 @@
-<template>
-  <v-app>
-    <v-main>
-      <router-view/>
-      <ContactActions/>
-    </v-main>
-  </v-app>
-</template>
-
-<script>
-import ContactActions from './components/ContactActions.vue'
-
-export default {
-  name: 'App',
-  components: { ContactActions },
-}
+<script setup lang="ts">
+import { RouterView } from "vue-router";
+import ContactActions from "@/components/ContactActions.vue";
 </script>
+
+<template>
+  <main>
+    <RouterView />
+    <ContactActions />
+  </main>
+</template>
 
 <style lang="scss">
 html {

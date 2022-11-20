@@ -1,27 +1,19 @@
-<template>
-    <div class="projects" id="projects">
-      <section class="projects__inner">
-          <Project
-            v-for="(project, i) in projects"
-            :key="i"
-            :project="project"
-          />
-      </section>
-    </div>
-</template>
-
-<script>
-import { mapState } from 'vuex'
-import Project from './Project.vue'
-
-export default {
-  name: 'Projects',
-  components: { Project },
-  computed: {
-    ...mapState(['projects']),
-  },
-}
+<script setup lang="ts">
+import { projects } from "@/data/projects";
+import TheProjectListProject from "@/components/TheProjectListProject.vue";
 </script>
+
+<template>
+  <div class="projects" id="projects">
+    <section class="projects__inner">
+      <TheProjectListProject
+        v-for="(project, i) in projects"
+        :key="i"
+        :project="project"
+      />
+    </section>
+  </div>
+</template>
 
 <style lang="scss" scoped>
 .projects {

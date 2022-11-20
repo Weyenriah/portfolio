@@ -1,3 +1,5 @@
+<script setup lang="ts"></script>
+
 <template>
   <div class="decor">
     <div class="decor__left"></div>
@@ -7,12 +9,6 @@
   </div>
 </template>
 
-<script>
-export default {
-  name: 'TheDecor',
-}
-</script>
-
 <style lang="scss" scoped>
 .decor {
   position: absolute;
@@ -20,7 +16,7 @@ export default {
   width: 400px;
   display: grid;
   grid-template-columns: 1fr 1fr;
-  gap: .2rem;
+  gap: 0.2rem;
   transition: $main-transition--slow;
 
   div {
@@ -33,7 +29,8 @@ export default {
     }
   }
 
-  &__left, &__right {
+  &__left,
+  &__right {
     @include main-background;
     width: 200px;
     height: 370px;

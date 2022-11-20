@@ -1,6 +1,10 @@
+<script setup lang="ts">
+import TheLogo from "@/components/TheLogo.vue";
+</script>
+
 <template>
   <nav class="nav">
-    <TheLogo size="--small"/>
+    <TheLogo size="--small" />
 
     <section class="nav__link-group">
       <!--<a
@@ -19,15 +23,6 @@
     </section>
   </nav>
 </template>
-
-<script>
-import TheLogo from './TheLogo.vue'
-
-export default {
-  name: 'TheNavigation',
-  components: { TheLogo },
-}
-</script>
 
 <style lang="scss" scoped>
 .nav {

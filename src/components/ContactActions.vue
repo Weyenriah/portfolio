@@ -1,44 +1,28 @@
+<script setup lang="ts"></script>
+
 <template>
   <div class="contact">
     <div>
-      <a
-        class="contact__action"
-        href="#"
-        aria-label="Email me!"
-      >
-        <v-icon>{{ 'fas fa-envelope' }}</v-icon>
+      <a class="contact__action" href="#" aria-label="Email me!">
+        <v-icon>{{ "fas fa-envelope" }}</v-icon>
       </a>
     </div>
 
-    <a
-      class="contact__action"
-      href="#"
-      aria-label="Visit my LinkedIn."
-    >
-      <v-icon>{{ 'fab fa-linkedin' }}</v-icon>
+    <a class="contact__action" href="#" aria-label="Visit my LinkedIn.">
+      <v-icon>{{ "fab fa-linkedin" }}</v-icon>
     </a>
 
-    <a
-      class="contact__action"
-      href="#"
-      aria-label="Visit my GitHub."
-    >
-      <v-icon>{{ 'fab fa-github' }}</v-icon>
+    <a class="contact__action" href="#" aria-label="Visit my GitHub.">
+      <v-icon>{{ "fab fa-github" }}</v-icon>
     </a>
   </div>
 </template>
 
-<script>
-export default {
-  name: 'ContactActions',
-}
-</script>
-
 <style lang="scss" scoped>
 .contact {
   position: fixed;
-  top: .5rem;
-  left: .4rem;
+  top: 0.5rem;
+  left: 0.4rem;
   display: flex;
   flex-direction: column;
   gap: 1rem;
@@ -57,7 +41,7 @@ export default {
     i {
       color: $white;
       font-size: 1rem;
-      transition: all .3s ease-in-out;
+      transition: all 0.3s ease-in-out;
     }
 
     &:hover {

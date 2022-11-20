@@ -1,32 +1,23 @@
 <template>
   <div class="home">
     <header class="header">
-      <TheNavigation/>
+      <TheNavigation />
 
-      <TheDecor/>
+      <TheDecor />
 
       <div class="header__content">
         <section class="header__content-inner">
-          <h2>
-            Hey you!
-          </h2>
+          <h2>Hey you!</h2>
 
           <h1>
-            Wanna create something <span class="purple-text">amazing</span> together?
+            Wanna create something
+            <span class="purple-text">amazing</span> together?
           </h1>
 
           <div class="header__btns">
-            <a
-              class="btn btn--purple"
-              href="/"
-            >
-              Contact me
-            </a>
+            <a class="btn btn--purple" href="/"> Contact me </a>
 
-            <a
-              class="btn btn--outline-purple"
-              href="#projects"
-            >
+            <a class="btn btn--outline-purple" href="#projects">
               See what I can do!
             </a>
           </div>
@@ -34,22 +25,17 @@
       </div>
     </header>
 
-    <Projects/>
+    <TheProjectList />
 
-    <AboutMe/>
+    <AboutMe />
   </div>
 </template>
 
-<script>
-import TheNavigation from '../components/TheNavigation.vue'
-import TheDecor from '../components/TheDecor.vue'
-import Projects from '../components/Projects.vue'
-import AboutMe from '../components/blocks/AboutMe.vue'
-
-export default {
-  name: 'Home',
-  components: { TheNavigation, TheDecor, Projects, AboutMe },
-}
+<script setup lang="ts">
+import TheNavigation from "@/components/TheNavigation.vue";
+import TheDecor from "@/components/TheDecor.vue";
+import TheProjectList from "@/components/TheProjectList.vue";
+import AboutMe from "@/components/AboutMe.vue";
 </script>
 
 <style lang="scss" scoped>
@@ -85,7 +71,7 @@ export default {
         font-weight: bold;
         font-size: 26px;
         color: $light-purple;
-        margin-bottom: .5rem;
+        margin-bottom: 0.5rem;
       }
 
       h1 {

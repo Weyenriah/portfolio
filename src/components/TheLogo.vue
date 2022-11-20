@@ -1,20 +1,19 @@
-<template>
-    <div
-      class="logo"
-      :class="'logo' + size"
-    >
-      <div class="logo__left"></div>
-      <div class="logo__middle"></div>
-      <div class="logo__right"></div>
-    </div>
-</template>
-
-<script>
-export default {
-  name: 'TheLogo',
-  props: ['size'],
-}
+<script setup lang="ts">
+defineProps({
+  size: {
+    type: String,
+    default: "--small",
+  },
+});
 </script>
+
+<template>
+  <div class="logo" :class="'logo' + size">
+    <div class="logo__left"></div>
+    <div class="logo__middle"></div>
+    <div class="logo__right"></div>
+  </div>
+</template>
 
 <style lang="scss" scoped>
 .logo {
@@ -25,7 +24,8 @@ export default {
     max-height: 30px;
 
     .logo {
-      &__left, &__right {
+      &__left,
+      &__right {
         height: 30px;
         width: 16px;
       }
@@ -37,7 +37,8 @@ export default {
     }
   }
 
-  &__left, &__right {
+  &__left,
+  &__right {
     background-color: white;
   }
 

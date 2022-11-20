@@ -1,40 +1,34 @@
+<script setup lang="ts"></script>
+
 <template>
   <section class="about-me">
     <div class="about-me__inner">
       <div class="about-me__image">
-        <img
-          src="./../../../src/assets/images/me-small.webp"
-          alt=""
-        >
+        <img src="@/assets/images/me-small.webp" alt="" />
       </div>
 
       <div class="about-me__content">
         <section>
           <h2>Who Am <span class="purple-text">I</span>?</h2>
-          <p>
-          </p>
+          <p></p>
         </section>
 
         <section>
-          <h3>Wanna create something <span class="purple-text">amazing</span> together?</h3>
-          <p>I'm currently working at <a href="https://qualitythink.se" target="_blank">Quality Think</a> in Gothenburg, Sweden, but don't let that stop you!</p>
-          <a
-            class="btn btn--outline-purple"
-            href=""
-          >
-            Contact me!
-          </a>
+          <h3>
+            Wanna create something
+            <span class="purple-text">amazing</span> together?
+          </h3>
+          <p>
+            I'm currently working at
+            <a href="https://qualitythink.se" target="_blank">Quality Think</a>
+            in Gothenburg, Sweden, but don't let that stop you!
+          </p>
+          <a class="btn btn--outline-purple" href=""> Contact me! </a>
         </section>
       </div>
     </div>
   </section>
 </template>
-
-<script>
-export default {
-  name: 'AboutMe',
-}
-</script>
 
 <style lang="scss" scoped>
 .about-me {
@@ -47,7 +41,7 @@ export default {
 
   &__decor {
     top: -35px;
-    opacity: .3;
+    opacity: 0.3;
   }
 
   .purple-text {
