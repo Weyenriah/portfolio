@@ -1,16 +1,14 @@
 <template>
   <nav class="nav">
-    <router-link to="/">
-      <TheLogo size="--small"/>
-    </router-link>
+    <TheLogo size="--small"/>
 
     <section class="nav__link-group">
-      <router-link
+      <a
         class="nav__link"
-        to="/"
+        href="#projects"
       >
         The work
-      </router-link>
+      </a>
 
       <router-link
         class="nav__link"
@@ -50,6 +48,13 @@ export default {
   &__link {
     color: $white;
     text-decoration: none;
+    text-transform: uppercase;
+    font-weight: bold;
+    transition: $main-transition;
+
+    &:hover {
+      color: $light-purple;
+    }
   }
 
   @include tablet-up {

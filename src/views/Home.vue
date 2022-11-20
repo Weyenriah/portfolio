@@ -24,16 +24,19 @@
         </section>
       </div>
     </header>
+
+    <Projects/>
   </div>
 </template>
 
 <script>
 import TheNavigation from '../components/TheNavigation.vue'
 import TheDecor from '../components/TheDecor.vue'
+import Projects from '../components/Projects.vue'
 
 export default {
   name: 'Home',
-  components: { TheNavigation, TheDecor },
+  components: { TheNavigation, TheDecor, Projects },
 }
 </script>
 
@@ -75,8 +78,8 @@ export default {
 
       h1 {
         font-weight: 400;
-        line-height: 44px;
-        font-size: 42px;
+        line-height: 48px;
+        font-size: 46px;
 
         .purple-text {
           transition: $main-transition;
