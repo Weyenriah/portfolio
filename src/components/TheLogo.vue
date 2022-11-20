@@ -68,6 +68,7 @@ export default {
         animation-name: jump;
         animation-timing-function: cubic-bezier(0s, 500s, 1s, 500s);
         animation-duration: 1s;
+        animation-iteration-count: infinite;
       }
     }
   }

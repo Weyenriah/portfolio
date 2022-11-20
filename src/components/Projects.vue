@@ -17,6 +17,23 @@
             </div>
           </div>
         </article>
+
+        <article class="project">
+          <img
+            src="./../../src/assets/images/big/lifeconcern.jpg"
+            alt=""
+          >
+
+          <div class="project__bullets">
+            <div class="project__bullet project__bullet--purple">
+              <p>Development</p>
+            </div>
+
+            <div class="project__bullet project__bullet--blue">
+              <p>Design</p>
+            </div>
+          </div>
+        </article>
       </section>
     </div>
 </template>
@@ -40,21 +57,17 @@ export default {
     display: grid;
     grid-template-columns: auto;
     grid-template-rows: 1fr;
-    gap: 40px;
+    gap: 20px;
   }
 
   @include tablet-up {
-    margin: 0 70px;
+    margin: 0 70px 40px 70px;
 
     &__inner {
       width: 90%;
       grid-template-columns: 1fr 1fr;
       grid-template-rows: 1fr;
-    }
-
-    article:nth-of-type(2) {
-      grid-column: 2;
-      margin-top: 70px;
+      gap: 40px;
     }
   }
 
