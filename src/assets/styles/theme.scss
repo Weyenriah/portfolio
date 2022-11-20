@@ -14,3 +14,43 @@ h2 {
 .thinify {
   font-weight: normal;
 }
+
+// New theme
+$light-main-color: rgb(227, 244, 252);
+$main-color: rgb(17, 35, 45);
+$dark-main-color: rgb(84, 134, 160);
+$darker-main-color: rgb(25, 54, 70);
+
+
+$dark-background: rgb(0, 1, 19);
+$dark-blue: rgba(17,35,45,1);
+$blue: rgba(11,43,143,1);
+$purple: rgba(168,8,233,1);
+$light-purple: rgb(210, 95, 255);
+$white: #fff;
+
+$main-transition: all .3s ease-in-out;
+$main-transition--slow: all .7s ease-in-out;
+
+@mixin main-background {
+  background: $dark-blue;
+  background: linear-gradient(21deg, $dark-blue 11%, $blue 50%, $purple 100%);
+}
+
+@mixin dark-background {
+  background: $dark-blue;
+  background: linear-gradient(21deg, $dark-background 50%, $blue 100%);
+}
+
+// Responsive
+@mixin mobile-up {
+  @media only screen and (min-width: 420px) {
+    @content;
+  }
+}
+
+@mixin tablet-up {
+  @media only screen and (min-width: 630px) {
+    @content;
+  }
+}

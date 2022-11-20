@@ -1,28 +1,135 @@
 <template>
   <div class="home">
-    <TheShowcase/>
-    <TheProjects/>
-    <v-divider/>
-    <TheAboutMe/>
+    <header class="header">
+      <TheNavigation/>
+
+      <TheDecor/>
+
+      <div class="header__content">
+        <section class="header__content-inner">
+          <h2>
+            Hey you!
+          </h2>
+
+          <h1>
+            Wanna create something <span class="purple-text">amazing</span> together?
+          </h1>
+
+          <a
+            class="btn btn--outline-purple"
+            href="/"
+          >
+            Contact me!
+          </a>
+        </section>
+      </div>
+    </header>
   </div>
 </template>
 
 <script>
-// @ is an alias to /src
-import TheShowcase from '../components/showcase/TheShowcase'
-import TheProjects from '../components/projects/TheProjects.vue'
-import TheAboutMe from '../components/about-me/TheAboutMe'
+import TheNavigation from '../components/TheNavigation.vue'
+import TheDecor from '../components/TheDecor.vue'
 
 export default {
   name: 'Home',
-  components: {
-    TheShowcase,
-    TheProjects,
-    TheAboutMe,
-  },
+  components: { TheNavigation, TheDecor },
 }
 </script>
 
-<style lang="scss">
+<style lang="scss" scoped>
+.header {
+  display: flex;
+  align-items: center;
+  position: relative;
+  @include dark-background;
+  height: 95vh;
+  max-height: 95vh;
+  margin: 0 16px 0 57px;
+  border-bottom-left-radius: 30px;
+  border-bottom-right-radius: 30px;
+  overflow: hidden;
 
+  &__content {
+    z-index: 2;
+    display: flex;
+    justify-content: flex-end;
+    width: 100%;
+    margin: 0 1em;
+
+    &-inner {
+      display: flex;
+      flex-direction: column;
+      align-items: flex-end;
+      width: 100%;
+      color: $white;
+      text-align: right;
+
+      h2 {
+        text-transform: uppercase;
+        font-weight: bold;
+        font-size: 26px;
+        color: $light-purple;
+        margin-bottom: .5rem;
+      }
+
+      h1 {
+        font-weight: 400;
+        line-height: 44px;
+        font-size: 42px;
+
+        .purple-text {
+          transition: $main-transition;
+        }
+
+        &:hover {
+          cursor: default;
+
+          .purple-text {
+            color: $light-purple;
+          }
+        }
+      }
+
+      .btn {
+        margin-top: 2rem;
+      }
+    }
+  }
+
+  @include tablet-up {
+    margin: 0 70px 0 70px;
+
+    &__content {
+      margin: 0 3em;
+
+      &-inner {
+        width: 50%;
+      }
+    }
+  }
+}
+
+.btn {
+  display: block;
+  width: fit-content;
+  border-radius: 30px;
+  padding: .5rem 3rem;
+  text-decoration: none;
+  text-transform: uppercase;
+  font-weight: bold;
+
+  &--outline {
+    &-purple {
+      border: 3px solid $light-purple;
+      color: $light-purple;
+      transition: $main-transition;
+
+      &:hover {
+        background-color: $light-purple;
+        color: $dark-background;
+      }
+    }
+  }
+}
 </style>
