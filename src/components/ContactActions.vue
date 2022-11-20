@@ -37,8 +37,8 @@ export default {
 <style lang="scss" scoped>
 .contact {
   position: fixed;
-  bottom: 1rem;
-  left: .5rem;
+  top: .5rem;
+  left: .4rem;
   display: flex;
   flex-direction: column;
   gap: 1rem;
@@ -48,8 +48,8 @@ export default {
     display: flex;
     justify-content: center;
     align-items: center;
-    height: 40px;
-    width: 40px;
+    height: 45px;
+    width: 45px;
     border-radius: 100%;
     text-decoration: none;
     box-shadow: 0 0.125rem 0.625rem rgba(0, 0, 0, 0.25);
@@ -69,6 +69,8 @@ export default {
 
   @include tablet-up {
     left: auto;
+    top: auto;
+    bottom: 1rem;
     right: 1rem;
   }
 }

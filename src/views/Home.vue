@@ -20,7 +20,7 @@
               class="btn btn--purple"
               href="/"
             >
-              Contact me!
+              Contact me
             </a>
 
             <a
@@ -36,14 +36,7 @@
 
     <Projects/>
 
-    <article>
-      <img src="" alt="">
-
-      <section>
-        <h2></h2>
-        <p></p>
-      </section>
-    </article>
+    <AboutMe/>
   </div>
 </template>
 
@@ -51,10 +44,11 @@
 import TheNavigation from '../components/TheNavigation.vue'
 import TheDecor from '../components/TheDecor.vue'
 import Projects from '../components/Projects.vue'
+import AboutMe from '../components/blocks/AboutMe.vue'
 
 export default {
   name: 'Home',
-  components: { TheNavigation, TheDecor, Projects },
+  components: { TheNavigation, TheDecor, Projects, AboutMe },
 }
 </script>
 
@@ -66,7 +60,7 @@ export default {
   @include dark-background;
   height: 95vh;
   max-height: 95vh;
-  margin: 0 16px 0 57px;
+  margin: 0 7px 0 57px;
   border-bottom-left-radius: 30px;
   border-bottom-right-radius: 30px;
   overflow: hidden;
@@ -111,16 +105,15 @@ export default {
           }
         }
       }
-
-      .btn {
-        margin-top: 2rem;
-      }
     }
   }
 
   &__btns {
     display: flex;
+    flex-direction: column;
+    align-items: flex-end;
     gap: 1rem;
+    margin-top: 20px;
   }
 
   @include tablet-up {
@@ -133,35 +126,15 @@ export default {
         width: 50%;
       }
     }
-  }
-}
 
-.btn {
-  display: block;
-  width: fit-content;
-  border-radius: 30px;
-  padding: .5rem 3rem;
-  text-decoration: none;
-  text-transform: uppercase;
-  font-weight: bold;
+    &__btns {
+      flex-direction: row;
+      gap: 1rem;
 
-  &--outline {
-    &-purple {
-      border: 3px solid $light-purple;
-      color: $light-purple;
-      transition: $main-transition;
-
-      &:hover {
-        background-color: $light-purple;
-        color: $dark-background;
+      .btn {
+        margin-top: 2rem;
       }
     }
-  }
-
-  &--purple {
-    background-color: $light-purple;
-    border: 3px solid $light-purple;
-    color: $dark-background;
   }
 }
 </style>

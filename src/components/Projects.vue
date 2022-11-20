@@ -25,8 +25,7 @@ export default {
 
 <style lang="scss" scoped>
 .projects {
-  margin: 0 16px 0 57px;
-  padding: 40px 0;
+  margin: 30px 7px 30px 57px;
   z-index: 3;
   position: relative;
 
@@ -36,26 +35,26 @@ export default {
     display: grid;
     grid-template-columns: auto;
     grid-template-rows: 1fr;
-    gap: 20px;
+    gap: 30px;
   }
 
   @include tablet-up {
-    margin: 0 70px 40px 70px;
+    margin: 60px 70px 60px 70px;
 
     &__inner {
       width: 90%;
       grid-template-columns: 1fr 1fr;
       grid-template-rows: 1fr;
-      gap: 40px;
+      gap: 60px;
     }
   }
 
-  article:nth-of-type(odd) {
+  a:nth-of-type(odd) article {
     border-top-left-radius: 30px;
     border-bottom-right-radius: 30px;
   }
 
-  article:nth-of-type(even) {
+  a:nth-of-type(even) article {
     border-top-right-radius: 30px;
     border-bottom-left-radius: 30px;
   }

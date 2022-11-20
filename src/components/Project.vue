@@ -1,4 +1,7 @@
 <template>
+  <router-link
+    :to="'/projects/' + project.slug"
+  >
     <article class="project">
       <img
         class="project__image"
@@ -17,6 +20,7 @@
         </div>
       </div>
     </article>
+  </router-link>
 </template>
 
 <script>
@@ -37,7 +41,7 @@ export default {
   &:hover {
     .project {
       &__bullets {
-        filter: grayscale(1);
+        opacity: 0;
       }
 
       &__image {

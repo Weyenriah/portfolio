@@ -34,3 +34,33 @@ $main-transition--slow: all .7s ease-in-out;
     @content;
   }
 }
+
+/* Global styling */
+.btn {
+  display: block;
+  width: fit-content;
+  border-radius: 30px;
+  padding: .5rem 3rem;
+  text-decoration: none;
+  text-transform: uppercase;
+  font-weight: bold;
+
+  &--outline {
+    &-purple {
+      border: 3px solid $light-purple;
+      color: $light-purple;
+      transition: $main-transition;
+
+      &:hover {
+        background-color: $light-purple;
+        color: $dark-background;
+      }
+    }
+  }
+
+  &--purple {
+    background-color: $light-purple;
+    border: 3px solid $light-purple;
+    color: $dark-background;
+  }
+}

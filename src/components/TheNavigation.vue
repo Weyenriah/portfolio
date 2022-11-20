@@ -3,7 +3,7 @@
     <TheLogo size="--small"/>
 
     <section class="nav__link-group">
-      <a
+      <!--<a
         class="nav__link"
         href="#projects"
       >
@@ -15,7 +15,7 @@
         to="/"
       >
         The person
-      </router-link>
+      </router-link>-->
     </section>
   </nav>
 </template>
