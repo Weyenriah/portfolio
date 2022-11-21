@@ -98,8 +98,6 @@
       font-size: 32px;
 
       &:hover {
-        cursor: default;
-
         .purple-text {
           color: $light-purple;
         }
@@ -111,8 +109,6 @@
       margin: 30px 0 10px 0;
 
       &:hover {
-        cursor: default;
-
         .purple-text {
           color: $light-purple;
         }
@@ -123,8 +119,6 @@
       margin: 0;
 
       &:hover {
-        cursor: default;
-
         .purple-text {
           color: $light-purple;
         }
