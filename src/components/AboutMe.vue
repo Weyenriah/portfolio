@@ -62,7 +62,7 @@
   }
 
   &__inner {
-    width: 90%;
+    width: 85%;
     margin: 0 auto;
     padding: 40px 0;
     display: flex;
@@ -148,11 +148,13 @@
     &__inner {
       width: 76%;
       flex-direction: row;
+      padding: 100px 0;
+      gap: 60px;
     }
 
     &__image {
       min-width: 300px;
-      height: 400px;
+      height: 450px;
     }
 
     &__content {
