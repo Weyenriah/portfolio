@@ -2,6 +2,6 @@ export interface Project {
   id: number;
   slug: string;
   title: string;
-  bullets: Array<"design" | "development">;
+  bullets: Array<"designer" | "developer">;
   img: string;
 }

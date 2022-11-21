@@ -17,7 +17,7 @@
           <div class="header__btns">
             <a
               class="btn btn--purple"
-              href="mailto:felicia@wallin.design?subject=Låt oss jobba tillsammans!"
+              href="mailto:felicia@wallin.design?subject=Let us work together!"
               target="_blank"
             >
               Contact me
@@ -104,6 +104,7 @@ import AboutMe from "@/components/AboutMe.vue";
     flex-direction: column;
     align-items: flex-end;
     gap: 1rem;
+    margin-top: 30px;
   }
 
   @include tablet-up {
@@ -116,14 +117,12 @@ import AboutMe from "@/components/AboutMe.vue";
         width: 50%;
       }
     }
+  }
 
+  @include laptop-up {
     &__btns {
       flex-direction: row;
       gap: 1rem;
-
-      .btn {
-        margin-top: 2rem;
-      }
     }
   }
 }

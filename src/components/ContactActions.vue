@@ -5,7 +5,7 @@
     <div>
       <a
         class="contact__action"
-        href="mailto:felicia@wallin.design?subject=Låt oss jobba tillsammans!"
+        href="mailto:felicia@wallin.design?subject=Let us work together!"
         target="_blank"
         aria-label="Email me!"
       >

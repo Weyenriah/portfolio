@@ -10,7 +10,17 @@
       <div class="about-me__content">
         <section>
           <h2>Who Am <span class="purple-text">I</span>?</h2>
-          <p></p>
+
+          <p>
+            My profession entails
+            <span class="purple-text">everything</span> between making your
+            website look good, make it work like a charm and do all of that
+            before the deadline. I <span class="purple-text">thrive</span>
+            on the bridge between design and development.
+            <br />
+            <br />
+            Oh, and Hello! My name is <span class="purple-text">Felicia</span>.
+          </p>
         </section>
 
         <section>
@@ -18,12 +28,20 @@
             Wanna create something
             <span class="purple-text">amazing</span> together?
           </h3>
+
           <p>
             I'm currently working at
             <a href="https://qualitythink.se" target="_blank">Quality Think</a>
             in Gothenburg, Sweden, but don't let that stop you!
           </p>
-          <a class="btn btn--outline-purple" href=""> Contact me! </a>
+
+          <a
+            class="btn btn--outline-purple"
+            href="mailto:felicia@wallin.design?subject=Let us work together!"
+            target="_blank"
+          >
+            Contact me!
+          </a>
         </section>
       </div>
     </div>
@@ -38,11 +56,6 @@
   margin: 0 7px 0 57px;
   border-top-left-radius: 30px;
   border-top-right-radius: 30px;
-
-  &__decor {
-    top: -35px;
-    opacity: 0.3;
-  }
 
   .purple-text {
     transition: $main-transition;
@@ -80,6 +93,7 @@
     color: $white;
 
     h2 {
+      margin: 0 0 10px 0;
       font-size: 32px;
 
       &:hover {
@@ -94,6 +108,18 @@
     h3 {
       font-size: 24px;
       margin: 30px 0 10px 0;
+
+      &:hover {
+        cursor: default;
+
+        .purple-text {
+          color: $light-purple;
+        }
+      }
+    }
+
+    p {
+      margin: 0;
 
       &:hover {
         cursor: default;

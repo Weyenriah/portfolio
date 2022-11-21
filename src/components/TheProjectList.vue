@@ -33,23 +33,15 @@ import TheProjectListProject from "@/components/TheProjectListProject.vue";
 
   @include tablet-up {
     margin: 60px 70px 60px 70px;
+  }
 
+  @include laptop-up {
     &__inner {
       width: 90%;
       grid-template-columns: 1fr 1fr;
       grid-template-rows: 1fr;
       gap: 60px;
     }
-  }
-
-  a:nth-of-type(odd) article {
-    border-top-left-radius: 30px;
-    border-bottom-right-radius: 30px;
-  }
-
-  a:nth-of-type(even) article {
-    border-top-right-radius: 30px;
-    border-bottom-left-radius: 30px;
   }
 }
 </style>

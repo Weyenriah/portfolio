@@ -5,7 +5,11 @@ import ContactActions from "@/components/ContactActions.vue";
 
 <template>
   <main>
-    <RouterView />
+    <RouterView v-slot="{ Component }">
+      <Transition name="fade">
+        <component :is="Component" />
+      </Transition>
+    </RouterView>
     <ContactActions />
   </main>
 </template>

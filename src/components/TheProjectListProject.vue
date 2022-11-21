@@ -77,7 +77,7 @@ defineProps({
 
   &__bullet {
     box-shadow: 0 0.125rem 0.625rem rgba(17, 35, 45, 0.25);
-    font-size: 12px;
+    font-size: 10px;
     color: $white;
     border-radius: 20px;
     padding: 0.5rem 1rem;
@@ -85,16 +85,20 @@ defineProps({
     letter-spacing: 1px;
     font-weight: bold;
 
-    &--design {
+    &--designer {
       background-color: $blue;
     }
 
-    &--development {
+    &--developer {
       background-color: $purple;
     }
 
     p {
       margin: 0;
+    }
+
+    @include tablet-up {
+      font-size: 12px;
     }
   }
 
