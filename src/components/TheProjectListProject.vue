@@ -17,7 +17,7 @@ defineProps({
 
 <template>
   <RouterLink :to="'/projects/' + project.slug" :class="placement">
-    <article class="project">
+    <article class="project" :id="project.slug">
       <img class="project__image" :src="project.img" alt="" />
 
       <div class="project__bullets">

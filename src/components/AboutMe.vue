@@ -73,11 +73,12 @@
   }
 
   &__image {
-    min-width: 100%;
+    min-width: 50%;
     height: 300px;
     overflow: hidden;
     border-top-left-radius: 30px;
     border-bottom-right-radius: 30px;
+    margin: 0 auto;
 
     img {
       height: 100%;
@@ -141,7 +142,9 @@
 
   @include tablet-up {
     margin: 0 70px 0 70px;
+  }
 
+  @include laptop-up {
     &__inner {
       width: 76%;
       flex-direction: row;

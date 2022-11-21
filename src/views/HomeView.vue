@@ -56,6 +56,8 @@ import AboutMe from "@/components/AboutMe.vue";
   border-bottom-left-radius: 30px;
   border-bottom-right-radius: 30px;
   overflow: hidden;
+  animation-name: show-header;
+  animation-duration: 1s;
 
   &__content {
     z-index: 2;
@@ -123,6 +125,18 @@ import AboutMe from "@/components/AboutMe.vue";
     &__btns {
       flex-direction: row;
       gap: 1rem;
+    }
+  }
+
+  @keyframes show-header {
+    0% {
+      opacity: 0;
+      height: 0;
+    }
+
+    100% {
+      opacity: 1;
+      height: 95vh;
     }
   }
 }
