@@ -31,3 +31,8 @@ jobs:
           context: .
           push: true
           tags: weyenriah/portfolio:latest
+
+      - name: Deploy
+        uses: wei/curl@v1
+        with:
+          args: "-H 'Authorization: Bearer ${{ secrets.SIDUS_WATCHTOWER_TOKEN }}' https://watchtower.sidus.io/v1/update"
