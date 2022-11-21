@@ -18,7 +18,8 @@ import TheProjectListProject from "@/components/TheProjectListProject.vue";
 
 <style lang="scss" scoped>
 .projects {
-  margin: 30px 7px 30px 57px;
+  margin: 0 7px 0 57px;
+  padding: 30px 0;
   z-index: 3;
   position: relative;
 
@@ -32,7 +33,8 @@ import TheProjectListProject from "@/components/TheProjectListProject.vue";
   }
 
   @include tablet-up {
-    margin: 60px 70px 60px 70px;
+    margin: 0 70px;
+    padding: 60px 0;
   }
 
   @include laptop-up {

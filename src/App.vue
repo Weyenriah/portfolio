@@ -6,7 +6,7 @@ import ContactActions from "@/components/ContactActions.vue";
 <template>
   <main>
     <RouterView v-slot="{ Component }">
-      <Transition name="fade">
+      <Transition name="fade" mode="out-in">
         <component :is="Component" />
       </Transition>
     </RouterView>
@@ -17,5 +17,15 @@ import ContactActions from "@/components/ContactActions.vue";
 <style lang="scss">
 html {
   scroll-behavior: smooth;
+}
+
+.fade-enter-active,
+.fade-leave-active {
+  transition: $main-transition;
+}
+
+.fade-enter-from,
+.fade-leave-to {
+  opacity: 0;
 }
 </style>
