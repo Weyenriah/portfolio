@@ -21,7 +21,7 @@ defineProps({
   gap: 2px;
 
   &--small {
-    max-height: 30px;
+    transform: scale(1.2);
 
     .logo {
       &__left,
