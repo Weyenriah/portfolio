@@ -3,17 +3,30 @@
 <template>
   <div class="contact">
     <div>
-      <a class="contact__action" href="#" aria-label="Email me!">
-        <v-icon>{{ "fas fa-envelope" }}</v-icon>
+      <a
+        class="contact__action"
+        href="mailto:felicia@wallin.design?subject=Låt oss jobba tillsammans!"
+        target="_blank"
+        aria-label="Email me!"
+      >
+        <font-awesome-icon icon="fa-solid fa-envelope" />
       </a>
     </div>
 
-    <a class="contact__action" href="#" aria-label="Visit my LinkedIn.">
-      <v-icon>{{ "fab fa-linkedin" }}</v-icon>
+    <a
+      class="contact__action"
+      href="https://www.linkedin.com/in/felicia-wallin/"
+      aria-label="Visit my LinkedIn."
+    >
+      <font-awesome-icon icon="fa-brands fa-linkedin" />
     </a>
 
-    <a class="contact__action" href="#" aria-label="Visit my GitHub.">
-      <v-icon>{{ "fab fa-github" }}</v-icon>
+    <a
+      class="contact__action"
+      href="https://github.com/Weyenriah"
+      aria-label="Visit my GitHub."
+    >
+      <font-awesome-icon icon="fa-brands fa-github" />
     </a>
   </div>
 </template>
@@ -37,15 +50,14 @@
     border-radius: 100%;
     text-decoration: none;
     box-shadow: 0 0.125rem 0.625rem rgba(0, 0, 0, 0.25);
+    color: $white;
 
-    i {
-      color: $white;
-      font-size: 1rem;
+    svg {
       transition: all 0.3s ease-in-out;
     }
 
     &:hover {
-      i {
+      svg {
         transform: scale(1.6);
       }
     }

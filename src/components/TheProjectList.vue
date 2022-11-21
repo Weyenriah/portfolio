@@ -10,6 +10,7 @@ import TheProjectListProject from "@/components/TheProjectListProject.vue";
         v-for="(project, i) in projects"
         :key="i"
         :project="project"
+        :placement="i % 2 === 0 ? 'left' : 'right'"
       />
     </section>
   </div>

@@ -29,7 +29,6 @@ import TheLogo from "@/components/TheLogo.vue";
   z-index: 2;
   position: absolute;
   top: 0;
-  right: 0;
   display: flex;
   justify-content: space-between;
   width: 100%;

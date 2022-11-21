@@ -7,15 +7,21 @@
 
       <div class="header__content">
         <section class="header__content-inner">
-          <h2>Hey you!</h2>
+          <h2 class="header__subheading">Hey you!</h2>
 
-          <h1>
+          <h1 class="header__main-title">
             Wanna create something
             <span class="purple-text">amazing</span> together?
           </h1>
 
           <div class="header__btns">
-            <a class="btn btn--purple" href="/"> Contact me </a>
+            <a
+              class="btn btn--purple"
+              href="mailto:felicia@wallin.design?subject=Låt oss jobba tillsammans!"
+              target="_blank"
+            >
+              Contact me
+            </a>
 
             <a class="btn btn--outline-purple" href="#projects">
               See what I can do!
@@ -65,31 +71,30 @@ import AboutMe from "@/components/AboutMe.vue";
       width: 100%;
       color: $white;
       text-align: right;
+    }
+  }
 
-      h2 {
-        text-transform: uppercase;
-        font-weight: bold;
-        font-size: 26px;
+  &__subheading {
+    text-transform: uppercase;
+    font-weight: bold;
+    font-size: 26px;
+    color: $light-purple;
+    margin: 0 0 0.5rem 0;
+  }
+
+  &__main-title {
+    font-weight: 400;
+    line-height: 48px;
+    font-size: 46px;
+    margin: 0;
+
+    .purple-text {
+      transition: $main-transition;
+    }
+
+    &:hover {
+      .purple-text {
         color: $light-purple;
-        margin-bottom: 0.5rem;
-      }
-
-      h1 {
-        font-weight: 400;
-        line-height: 48px;
-        font-size: 46px;
-
-        .purple-text {
-          transition: $main-transition;
-        }
-
-        &:hover {
-          cursor: default;
-
-          .purple-text {
-            color: $light-purple;
-          }
-        }
       }
     }
   }
@@ -99,7 +104,6 @@ import AboutMe from "@/components/AboutMe.vue";
     flex-direction: column;
     align-items: flex-end;
     gap: 1rem;
-    margin-top: 20px;
   }
 
   @include tablet-up {

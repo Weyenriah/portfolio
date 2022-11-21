@@ -8,11 +8,15 @@ defineProps({
     type: Object as PropType<Project>,
     required: true,
   },
+  placement: {
+    type: String as PropType<"left" | "right">,
+    required: true,
+  },
 });
 </script>
 
 <template>
-  <RouterLink :to="'/projects/' + project.slug">
+  <RouterLink :to="'/projects/' + project.slug" :class="placement">
     <article class="project">
       <img class="project__image" :src="project.img" alt="" />
 
@@ -31,6 +35,18 @@ defineProps({
 </template>
 
 <style lang="scss" scoped>
+.left {
+  overflow: hidden;
+  border-top-left-radius: 30px;
+  border-bottom-right-radius: 30px;
+}
+
+.right {
+  overflow: hidden;
+  border-top-right-radius: 30px;
+  border-bottom-left-radius: 30px;
+}
+
 .project {
   box-shadow: 0 0.125rem 0.625rem rgba(17, 35, 45, 0.25);
   height: 100%;
