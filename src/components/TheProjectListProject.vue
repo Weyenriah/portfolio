@@ -16,9 +16,13 @@ defineProps({
 </script>
 
 <template>
-  <RouterLink :to="'/projects/' + project.slug" :class="placement">
+  <RouterLink
+    :to="'/projects/' + project.slug"
+    :class="placement"
+    :aria-label="'Case: ' + project.title"
+  >
     <article class="project" :id="project.slug">
-      <img class="project__image" :src="project.img" alt="" />
+      <img class="project__image" :src="project.img" alt=" " loading="lazy" />
 
       <div class="project__bullets">
         <div
