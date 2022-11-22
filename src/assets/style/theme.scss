@@ -5,6 +5,7 @@ $blue: #0b2b8f;
 $light-blue: #1b48d2;
 $purple: #a808e9;
 $light-purple: #d25fff;
+$intensive-purple: #c739ff;
 $white: #fff;
 
 /* Backgrounds */
@@ -46,8 +47,34 @@ $main-transition--slow: all .7s ease-in-out;
   font-family: "Roboto", sans-serif;
 }
 
+html {
+  scroll-behavior: smooth;
+}
+
 body {
   margin: 0;
+}
+
+.fade-enter-active,
+.fade-leave-active {
+  transition: $main-transition;
+}
+
+.fade-enter-from,
+.fade-leave-to {
+  opacity: 0;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  cursor: default;
+}
+
+a {
+  cursor: pointer;
+
+  article {
+    cursor: pointer;
+  }
 }
 
 .btn {
@@ -77,5 +104,11 @@ body {
     background-color: $light-purple;
     border: 3px solid $light-purple;
     color: $dark-background;
+    transition: $main-transition;
+
+    &:hover {
+      background-color: $intensive-purple;
+      border: 3px solid $intensive-purple;
+    }
   }
 }

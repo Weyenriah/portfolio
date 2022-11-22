@@ -15,14 +15,6 @@ import ContactActions from "@/components/ContactActions.vue";
 </template>
 
 <style lang="scss">
-* {
-  cursor: url("./src/assets/cursor/circle.svg"), auto;
-}
-
-html {
-  scroll-behavior: smooth;
-}
-
 .fade-enter-active,
 .fade-leave-active {
   transition: $main-transition;
