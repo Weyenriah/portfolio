@@ -4,7 +4,9 @@ import TheLogo from "@/components/TheLogo.vue";
 
 <template>
   <nav class="nav">
-    <TheLogo size="--small" />
+    <RouterLink to="/">
+      <TheLogo size="--small" />
+    </RouterLink>
 
     <section class="nav__link-group">
       <!--<a
