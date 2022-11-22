@@ -19,10 +19,15 @@ defineProps({
   <RouterLink
     :to="'/projects/' + project.slug"
     :class="placement"
-    :aria-label="'Case: ' + project.title"
+    :aria-label="'Link to Case: ' + project.title"
   >
     <article class="project" :id="project.slug">
-      <img class="project__image" :src="project.img" alt=" " loading="lazy" />
+      <img
+        class="project__image"
+        :src="project.img"
+        :alt="'Displaying the landing page of ' + project.title"
+        loading="lazy"
+      />
 
       <div class="project__bullets">
         <div

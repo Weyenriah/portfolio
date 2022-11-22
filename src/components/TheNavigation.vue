@@ -4,25 +4,9 @@ import TheLogo from "@/components/TheLogo.vue";
 
 <template>
   <nav class="nav">
-    <RouterLink to="/">
+    <RouterLink to="/" aria-label="Link to the homepage">
       <TheLogo size="--small" />
     </RouterLink>
-
-    <section class="nav__link-group">
-      <!--<a
-        class="nav__link"
-        href="#projects"
-      >
-        The work
-      </a>
-
-      <router-link
-        class="nav__link"
-        to="/"
-      >
-        The person
-      </router-link>-->
-    </section>
   </nav>
 </template>
 
