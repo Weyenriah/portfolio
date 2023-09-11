@@ -1,82 +1,161 @@
-import type { Project } from "@/types/project";
+import type { Project } from '@/types/projects';
 
-export const projects: Array<Project> = [
-  {
-    id: 1,
-    slug: "foptec",
-    title: "Foptec",
-    description:
-      "Foptec is a company that provides the food industry with the best solutions for the packaging of their products, mainly the stickers ontop that provide the customer with information about the product. The focus of the project was to create a website that showcase the company's products and services.",
-    bullets: ["designer", "developer"],
-    img: new URL(
-      `@/assets/images/projects/webp/foptec-1000.webp`,
-      import.meta.url
-    ).href,
-    link: "https://www.foptec.com",
-  },
-  {
-    id: 2,
-    slug: "lifeconcern",
-    title: "Scholander Lifeconcern",
-    description:
-      "The focus of this project was to upgrade the old website: from XHTML (made somewhere between 2005 - 2010) to WordPress; from no responsiveness to fully functional in all popular screen sizes.",
-    bullets: ["designer", "developer"],
-    img: new URL(
-      `@/assets/images/projects/webp/lifeconcern-1000.webp`,
-      import.meta.url
-    ).href,
-    link: "https://www.lifeconcern.se",
-  },
-  {
-    id: 3,
-    slug: "orebro-katthem",
-    title: "Örebro Katthem",
-    description:
-      "The purpose of this project was to create an easy to use website - both to update, use and maintain - and provide all who want to support the cat shelter a place to find all the necessary information. The website is built as plain as can be to test out my knowledge of fullstack development during my studies at Kristianstad University.",
-    bullets: ["designer", "developer"],
-    img: new URL(
-      `@/assets/images/projects/webp/orebrokatthem-1000.webp`,
-      import.meta.url
-    ).href,
-    link: "https://www.orebrokatthem.com",
-  },
-  {
-    id: 4,
-    slug: "yo-adrian",
-    title: "Yo Adrian",
-    description:
-      "The project was through my current employer (Quality Think) and the purpose of the website was to showcase Yo Adrian's expertise as a creative content studio. My role in the project was to develop the website as well as giving input on the design and the user experience",
-    bullets: ["developer"],
-    img: new URL(
-      `@/assets/images/projects/webp/yoadrian-1000.webp`,
-      import.meta.url
-    ).href,
-    link: "https://www.yoadrian.se",
-  },
-  {
-    id: 5,
-    slug: "grain-cloud",
-    title: "Grain Cloud",
-    description:
-      "The project was through my current employer (Quality Think), and the design is provided by the marketing agency Dragster. My role was to develop the website (together with my team) as well as handling the project management on our end. The purpose of the website is to provide Grain Cloud's customers with a place to find all the necessary information about their products as well as strengthen the company's digital presence.",
-    bullets: ["developer"],
-    img: new URL(
-      `@/assets/images/projects/webp/graincloud-1000.webp`,
-      import.meta.url
-    ).href,
-    link: "https://www.graincloud.com",
-  },
-  {
-    id: 6,
-    slug: "freja-partner",
-    title: "Freja Partner",
-    description:
-      "The project was through my current employer (Quality Think), and the design is provided by the marketing agency Sultan & Sultan. My role was to develop the website, and is my first project at Quality Think.",
-    bullets: ["developer"],
-    img: new URL(
-      `@/assets/images/projects/webp/frejapartner-1000.webp`,
-      import.meta.url
-    ).href,
-    link: "https://www.frejapartner.se",
-  },
-];
+const signImageUrl = (name: string) => {
+    return new URL(`../assets/images/${name}.png`, import.meta.url).href
+}
+
+export const projects: Project[] = [
+    {
+        id: 1,
+        name: 'Foptec',
+        excerpt: 'Text',
+        description: 'Text',
+        images: [
+            signImageUrl('foptec'),
+            signImageUrl('foptec2'),
+            signImageUrl('foptec3'),
+        ],
+        link: 'https://foptec.com',
+        color: '#8CB9CF',
+        category: ['project', 'design', 'development'],
+    },
+    {
+        id: 11,
+        name: 'Pension On Demand',
+        excerpt: 'Text',
+        description: 'Text',
+        images: [
+            signImageUrl('pensionondemand'),
+            signImageUrl('pensionondemand2'),
+            signImageUrl('pensionondemand3'),
+            signImageUrl('pensionondemand4'),
+        ],
+        link: 'https://app.pensionondemand.se',
+        color: '#A9C1DB',
+        category: ['project', 'design', 'development'],
+    },
+    {
+        id: 7,
+        name: 'Göteborgs Bygghantverk',
+        excerpt: 'Text',
+        description: 'Text',
+        images: [
+            signImageUrl('gbgbygghantverk'),
+            signImageUrl('gbgbygghantverk2'),
+            signImageUrl('gbgbygghantverk3'),
+        ],
+        link: 'https://gbgbygghantverk.se',
+        color: '#EAD2C0',
+        category: ['project', 'design', 'development'],
+    },
+    {
+        id: 2,
+        name: 'Demo av Volvo Connect',
+        excerpt: 'Text',
+        description: 'Text',
+        images: [
+            signImageUrl('vroom-desktop1'),
+            signImageUrl('vroom-mobile1'),
+            signImageUrl('vroom-mobile2'),
+        ],
+        link: 'https://www.volvobuses.com/se/services/volvo-connect/demo.html',
+        color: '#F2F2F2',
+        category: ['project', 'development'],
+    },
+    {
+        id: 3,
+        name: 'Smartcraft',
+        excerpt: 'Text',
+        description: 'Text',
+        images: [
+            signImageUrl('smartcraft'),
+            signImageUrl('smartcraft2'),
+            signImageUrl('smartcraft3'),
+        ],
+        link: 'https://smartcraft.com',
+        color: '#ADBEDE',
+        category: ['project', 'development'],
+    },
+    {
+        id: 4,
+        name: 'Yo Adrian',
+        excerpt: 'Text',
+        description: 'Text',
+        images: [
+            signImageUrl('yoadrian'),
+            signImageUrl('yoadrian2'),
+            signImageUrl('yoadrian3'),
+        ],
+        link: 'https://yoadrian.se',
+        color: '#FBB28B',
+        category: ['project', 'development'],
+    },
+    {
+        id: 5,
+        name: 'Grain Cloud',
+        excerpt: 'Text',
+        description: 'Text',
+        images: [
+            signImageUrl('graincloud'),
+            signImageUrl('graincloud2'),
+            signImageUrl('graincloud3'),
+        ],
+        link: 'https://graincloud.com',
+        color: '#F6F1DE',
+        category: ['project', 'development'],
+    },
+    {
+        id: 6,
+        name: 'Freja Partner',
+        excerpt: 'Text',
+        description: 'Text',
+        images: [
+            signImageUrl('frejapartner'),
+            signImageUrl('frejapartner2'),
+            signImageUrl('frejapartner3'),
+        ],
+        link: 'https://frejapartner.se',
+        color: '#9EA4AB',
+        category: ['development'],
+    },
+    {
+        id: 8,
+        name: 'M&P: Paint & Coatings',
+        excerpt: 'Text',
+        description: 'Text',
+        images: [
+            signImageUrl('mppc'),
+            signImageUrl('mppc2'),
+            signImageUrl('mppc3'),
+        ],
+        link: 'https://mppc.se',
+        color: '#C5DBE9',
+        category: ['development'],
+    },
+    {
+        id: 9,
+        name: 'Hills Golf Club',
+        excerpt: 'Text',
+        description: 'Text',
+        images: [
+            signImageUrl('hills'),
+            signImageUrl('hills2'),
+            signImageUrl('hills3'),
+        ],
+        link: 'https://hillsgolfclub.se',
+        color: '#E7E8C5',
+        category: ['project', 'development'],
+    },
+    {
+        id: 10,
+        name: 'Daya Ventures',
+        excerpt: 'Text',
+        description: 'Text',
+        images: [
+            signImageUrl('daya')
+        ],
+        link: 'https://daya.se',
+        color: '#BEB2EF',
+        category: ['project', 'design', 'development'],
+    },
+]

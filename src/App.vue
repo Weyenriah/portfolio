@@ -1,27 +1,27 @@
 <script setup lang="ts">
-import { RouterView } from "vue-router";
-import ContactActions from "@/components/ContactActions.vue";
+  import { RouterView } from "vue-router";
+  import TheNavigation from "@/components/TheNavigation.vue";
+  import TheContactWays from "@/components/TheContactWays.vue";
 </script>
 
 <template>
-  <main>
-    <RouterView v-slot="{ Component }">
-      <Transition name="fade" mode="out-in">
-        <component :is="Component" />
-      </Transition>
-    </RouterView>
-    <ContactActions />
-  </main>
+  <div class="grey-part"></div>
+
+  <TheNavigation />
+
+  <RouterView />
+
+  <TheContactWays />
 </template>
 
 <style lang="scss">
-.fade-enter-active,
-.fade-leave-active {
-  transition: $main-transition;
-}
-
-.fade-enter-from,
-.fade-leave-to {
-  opacity: 0;
+.grey-part {
+  position: fixed;
+  top: 0;
+  left: 0;
+  height: 100vh;
+  width: 70%;
+  background-color: $primary;
+  z-index: -1;
 }
 </style>
