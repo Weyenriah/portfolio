@@ -1,96 +1,321 @@
-<script lang="ts" setup>
-</script>
-
 <template>
-    <article class="hero">
-        <div class="hero__content">
-            <h1>Under konstruktion.</h1>
-            <router-link class="hero__cta" to="/case">
-                Men kolla min case
-            </router-link>
-        </div>
+  <section class="hero">
+    <div class="hero__orb-container">
+      <div
+        v-motion
+        class="hero__orb"
+        :style="{
+          top: '25%',
+          left: '25%',
+          width: '384px',
+          height: '384px',
+          background: 'radial-gradient(circle, var(--accent-purple) 0%, transparent 70%)',
+        }"
+        :animate="{
+          scale: [1, 1.2, 1],
+          opacity: [0.2, 0.3, 0.2],
+        }"
+        :transition="{
+          duration: 8,
+          repeat: Infinity,
+          ease: 'easeInOut',
+        }"
+      />
+      <div
+        v-motion
+        class="hero__orb"
+        :style="{
+          bottom: '25%',
+          right: '25%',
+          width: '384px',
+          height: '384px',
+          background: 'radial-gradient(circle, var(--accent-blue) 0%, transparent 70%)',
+        }"
+        :animate="{
+          scale: [1.2, 1, 1.2],
+          opacity: [0.3, 0.2, 0.3],
+        }"
+        :transition="{
+          duration: 8,
+          repeat: Infinity,
+          ease: 'easeInOut',
+        }"
+      />
+    </div>
 
-        <a href="#projects">
-            <font-awesome-icon class="hero__down" icon="fa-solid fa-arrow-down" />
+    <div class="hero__content">
+      <div
+        v-motion
+        :initial="{ opacity: 0, y: 20 }"
+        :enter="{ opacity: 1, y: 0 }"
+        :transition="{ duration: 800 }"
+        class="hero__title-container"
+      >
+        <h1
+          v-motion
+          class="hero__title"
+          :animate="{
+            backgroundPosition: ['0% 50%', '100% 50%', '0% 50%'],
+          }"
+          :transition="{
+            duration: 5,
+            repeat: Infinity,
+            ease: 'linear',
+          }"
+          :style="{
+            backgroundImage:
+              'linear-gradient(90deg, #ffffff 0%, var(--accent-purple) 25%, var(--accent-blue) 50%, var(--accent-purple) 75%, #ffffff 100%)',
+            backgroundSize: '200% 100%',
+            backgroundClip: 'text',
+            WebkitBackgroundClip: 'text',
+            WebkitTextFillColor: 'transparent',
+          }"
+        >
+          Hey there!
+        </h1>
+      </div>
+
+      <p
+        v-motion
+        :initial="{ opacity: 0, y: 20 }"
+        :enter="{ opacity: 1, y: 0 }"
+        :transition="{ duration: 800, delay: 200 }"
+        class="hero__subtitle"
+      >
+        I'm Felicia. Designer & Developer crafting beautiful digital experiences
+      </p>
+
+      <p
+        v-motion
+        :initial="{ opacity: 0, y: 20 }"
+        :enter="{ opacity: 1, y: 0 }"
+        :transition="{ duration: 800, delay: 400 }"
+        class="hero__description"
+      >
+        I blend creativity with code to build intuitive, modern interfaces that
+        people love to use. Passionate about design systems, user experience, and
+        bringing ideas to life.
+      </p>
+
+      <div
+        v-motion
+        :initial="{ opacity: 0, y: 20 }"
+        :enter="{ opacity: 1, y: 0 }"
+        :transition="{ duration: 800, delay: 600 }"
+        class="hero__buttons"
+      >
+        <a
+          v-motion
+          href="#projects"
+          class="hero__button hero__button--primary"
+          :style="{
+            background:
+              'linear-gradient(135deg, rgba(167, 139, 250, 0.2) 0%, rgba(96, 165, 250, 0.2) 100%)',
+          }"
+          :hovered="{
+            scale: 1.05,
+            borderColor: 'var(--accent-purple)',
+          }"
+          :tapped="{ scale: 0.98 }"
+        >
+          <div
+            v-motion
+            class="hero__button-hover-bg"
+            :style="{
+              background:
+                'linear-gradient(135deg, rgba(167, 139, 250, 0.3) 0%, rgba(96, 165, 250, 0.3) 100%)',
+            }"
+            :hovered="{ opacity: 1 }"
+            :transition="{ duration: 0.3 }"
+          />
+          <span class="hero__button-text">
+            View My Work
+          </span>
         </a>
-    </article>
+        <a
+          v-motion
+          href="#contact"
+          class="hero__button hero__button--secondary"
+          :style="{
+            background: 'rgba(255, 255, 255, 0.03)',
+          }"
+          :hovered="{
+            scale: 1.05,
+            borderColor: 'rgba(255, 255, 255, 0.2)',
+          }"
+          :tapped="{ scale: 0.98 }"
+        >
+          <div
+            v-motion
+            class="hero__button-hover-bg"
+            :style="{
+              background: 'rgba(255, 255, 255, 0.08)',
+            }"
+            :hovered="{ opacity: 1 }"
+            :transition="{ duration: 0.3 }"
+          />
+          <span class="hero__button-text hero__button-text--secondary">
+            Get In Touch
+          </span>
+        </a>
+      </div>
+
+      <div
+        v-motion
+        :initial="{ opacity: 0, y: 20 }"
+        :enter="{ opacity: 1, y: 0 }"
+        :transition="{ duration: 800, delay: 800 }"
+        class="hero__scroll-indicator-container"
+      >
+        <div
+          v-motion
+          :animate="{
+            y: [0, 10, 0],
+          }"
+          :transition="{
+            duration: 2,
+            repeat: Infinity,
+            ease: 'easeInOut',
+          }"
+          class="hero__scroll-indicator"
+        >
+          <svg
+            width="24"
+            height="24"
+            viewBox="0 0 24 24"
+            fill="none"
+            stroke="currentColor"
+            stroke-width="2"
+            stroke-linecap="round"
+            stroke-linejoin="round"
+          >
+            <path d="M12 5v14M19 12l-7 7-7-7" />
+          </svg>
+        </div>
+      </div>
+    </div>
+  </section>
 </template>
 
-<style lang="scss">
+<style lang="scss" scoped>
 .hero {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    position: relative;
-    height: 100vh;
-    width: 100%;
-    background-color: $secondary;
-    border-bottom-right-radius: 90%;
-
-    // On smaller screens, make the border radius less
-    @media (max-width: 768px) {
-        border-bottom-right-radius: 100%;
-    }
-
-    &__content {
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-    }
-
-    h1 {
-        color: $white;
-        font-size: 5rem;
-        font-weight: 100;
-        margin: 0;
-    }
-
-    &__cta {
-        display: block;
-        width: fit-content;
-        background-color: $white;
-        color: $black;
-        text-decoration: none;
-        padding: .5rem 1.5rem;
-        border-radius: 30px;
-        text-align: center;
-        margin-top: 2rem;
-        transition: all .2s ease-in-out;
-
-        &:hover {
-            transform: scale(1.1);
-        }
-    }
-
-    &__down {
-        position: absolute;
-        bottom: 1rem;
-        left: 50%;
-        transform: translateX(-50%);
-        font-size: 2rem;
-        color: $secondary;
-        animation: bounce 3s ease-in-out infinite;
-
-        // On smaller screens, make the font size smaller
-        @media (max-width: 768px) {
-            font-size: 1.5rem;
-            left: inherit;
-            right: 1rem;
-            bottom: 5.5rem;
-            transform: translateX(0);
-        }
-    }
+  min-height: 80vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  overflow: hidden;
+  padding-left: 1.5rem;
+  padding-right: 1.5rem;
 }
 
-@keyframes bounce {
-    0% {
-        transform: translateX(-50%) translateY(0);
-    }
-    50% {
-        transform: translateX(-50%) translateY(.5rem);
-    }
-    100% {
-        transform: translateX(-50%) translateY(0);
-    }
+.hero__orb-container {
+  position: absolute;
+  inset: 0;
+  overflow: hidden;
+  pointer-events: none;
+}
+
+.hero__orb {
+  position: absolute;
+  border-radius: 9999px;
+  opacity: 0.2; // This is the base opacity
+}
+
+.hero__content {
+  position: relative;
+  z-index: 10;
+  max-width: 56rem; // 896px (max-w-4xl)
+  margin-left: auto;
+  margin-right: auto;
+  text-align: center;
+  margin-top: 6rem;
+}
+
+.hero__title-container {
+  margin-bottom: 2rem;
+}
+
+.hero__title {
+  font-size: 5.625rem; // ~text-8xl
+  line-height: 1;
+  margin-bottom: 1rem;
+  color: white; // Fallback in case gradient fails
+  
+  @media (min-width: 768px) {
+    font-size: 6.75rem; // ~md:text-9xl
+  }
+}
+
+.hero__subtitle {
+  font-size: 1.25rem; // text-xl
+  line-height: 1.75rem;
+  color: #d1d5db; // text-gray-300
+  margin-bottom: 1.5rem;
+
+  @media (min-width: 768px) {
+    font-size: 1.5rem; // md:text-2xl
+    line-height: 2rem;
+  }
+}
+
+.hero__description {
+  color: #9ca3af; // text-gray-400
+  max-width: 42rem; // max-w-2xl
+  margin-left: auto;
+  margin-right: auto;
+  margin-bottom: 3rem;
+}
+
+.hero__buttons {
+  display: flex;
+  gap: 1rem;
+  justify-content: center;
+  align-items: center;
+}
+
+.hero__button {
+  padding: 1rem 2rem;
+  border-radius: 0.75rem; // rounded-xl
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  backdrop-filter: blur(4px);
+  transition: all 0.3s ease;
+  position: relative;
+  overflow: hidden;
+  text-decoration: none;
+
+  &--primary {
+    border-color: rgba(255, 255, 255, 0.2); // border-white/20
+  }
+
+  &--secondary {
+    border-color: rgba(255, 255, 255, 0.1); // border-white/10
+  }
+}
+
+.hero__button-hover-bg {
+  position: absolute;
+  inset: 0;
+  opacity: 0;
+  /* v-motion will handle the opacity on hover */
+}
+
+.hero__button-text {
+  position: relative; // Ensures text is above the hover-bg
+  z-index: 2;
+  color: white;
+
+  &--secondary {
+    color: #d1d5db; // text-gray-300
+  }
+}
+
+.hero__scroll-indicator-container {
+  margin-top: 4rem; // mt-16
+}
+
+.hero__scroll-indicator {
+  display: inline-block;
+  color: #6b7280; // text-gray-500
 }
 </style>

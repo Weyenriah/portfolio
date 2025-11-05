@@ -1,27 +1,33 @@
 <script setup lang="ts">
-  import { RouterView } from "vue-router";
-  import TheNavigation from "@/components/TheNavigation.vue";
-  import TheContactWays from "@/components/TheContactWays.vue";
 </script>
 
 <template>
-  <div class="grey-part"></div>
-
-  <TheNavigation />
-
-  <RouterView />
-
-  <TheContactWays />
+  <router-view />
 </template>
 
 <style lang="scss">
-.grey-part {
-  position: fixed;
-  top: 0;
-  left: 0;
-  height: 100vh;
-  width: 70%;
-  background-color: $primary;
-  z-index: -1;
-}
+  /* src/main.scss */
+
+  /* Define your CSS variables (from the original files) */
+  :root {
+    --accent-purple: #a78bfa; // (This is a guess, adjust as needed)
+    --accent-blue: #60a5fa;   // (This is a guess, adjust as needed)
+  }
+
+  body {
+    background-color: #0a0a0a;
+    color: white;
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+    margin: 0;
+  }
+
+  /* You can add other global styles here */
+  a {
+    text-decoration: none;
+    color: inherit;
+  }
+
+  * {
+    box-sizing: border-box;
+  }
 </style>

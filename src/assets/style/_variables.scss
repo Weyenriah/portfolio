@@ -1,0 +1,16 @@
+// Define your CSS variables (colors) inside the :root scope
+:root {
+  // Using the original hex codes from your React project
+  --accent-purple: #a78bfa; 
+  --accent-blue: #60a5fa;
+
+  // You can add reusable text colors here too
+  --text-primary: #ffffff;
+  --text-secondary: #d1d5db; // text-gray-300
+  --text-tertiary: #9ca3af; // text-gray-400
+  --text-muted: #6b7280;   // text-gray-500
+
+  // And border colors
+  --border-color-light: rgba(255, 255, 255, 0.2);
+  --border-color-dim: rgba(255, 255, 255, 0.1);
+}

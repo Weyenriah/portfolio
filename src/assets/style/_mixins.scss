@@ -1,0 +1,13 @@
+// Media query for tablet and up
+@mixin tablet-up {
+  @media (min-width: 768px) {
+    @content;
+  }
+}
+
+// Media query for desktop and up
+@mixin desktop-up {
+  @media (min-width: 1024px) {
+    @content;
+  }
+}

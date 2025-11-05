@@ -1,0 +1,37 @@
+// Local Work Sans font-face definition
+@font-face {
+    font-family: 'Work Sans';
+    src: url('../fonts/WorkSans-VariableFont_wght.ttf') format('truetype');
+    font-weight: 100 900;
+    font-style: normal;
+    font-display: swap;
+}
+
+// Define a SCSS variable for the Work Sans font
+$font-family-worksans: 'Work Sans', Arial, Helvetica, sans-serif;
+
+// Local Exo font-face definition
+@font-face {
+    font-family: 'Exo';
+    src: url('../fonts/Exo-VariableFont_wght.ttf') format('truetype');
+    font-weight: 100 900;
+    font-style: normal;
+    font-display: swap;
+}
+
+// Define a SCSS variable for the Exo font
+$font-family-exo: 'Exo', Arial, Helvetica, sans-serif;
+
+// Example usage: apply Exo as the default font for the body
+h1, h2, h3, h4, h5, h6, button {
+	font-family: $font-family-exo;
+}
+
+h1 {
+    font-family: $font-family-exo;
+    font-weight: 500;
+}
+
+p, span, li, a, div {
+    font-family: $font-family-worksans;
+}
