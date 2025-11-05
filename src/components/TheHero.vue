@@ -108,52 +108,12 @@
           v-motion
           href="#projects"
           class="hero__button hero__button--primary"
-          :style="{
-            background:
-              'linear-gradient(135deg, rgba(167, 139, 250, 0.2) 0%, rgba(96, 165, 250, 0.2) 100%)',
-          }"
-          :hovered="{
-            scale: 1.05,
-            borderColor: 'var(--accent-purple)',
-          }"
-          :tapped="{ scale: 0.98 }"
         >
-          <div
-            v-motion
-            class="hero__button-hover-bg"
-            :style="{
-              background:
-                'linear-gradient(135deg, rgba(167, 139, 250, 0.3) 0%, rgba(96, 165, 250, 0.3) 100%)',
-            }"
-            :hovered="{ opacity: 1 }"
-            :transition="{ duration: 0.3 }"
-          />
           <span class="hero__button-text">
             View My Work
           </span>
         </a>
-        <a
-          v-motion
-          href="#contact"
-          class="hero__button hero__button--secondary"
-          :style="{
-            background: 'rgba(255, 255, 255, 0.03)',
-          }"
-          :hovered="{
-            scale: 1.05,
-            borderColor: 'rgba(255, 255, 255, 0.2)',
-          }"
-          :tapped="{ scale: 0.98 }"
-        >
-          <div
-            v-motion
-            class="hero__button-hover-bg"
-            :style="{
-              background: 'rgba(255, 255, 255, 0.08)',
-            }"
-            :hovered="{ opacity: 1 }"
-            :transition="{ duration: 0.3 }"
-          />
+        <a href="#contact" class="hero__button hero__button--secondary">
           <span class="hero__button-text hero__button-text--secondary">
             Get In Touch
           </span>
@@ -179,18 +139,7 @@
           }"
           class="hero__scroll-indicator"
         >
-          <svg
-            width="24"
-            height="24"
-            viewBox="0 0 24 24"
-            fill="none"
-            stroke="currentColor"
-            stroke-width="2"
-            stroke-linecap="round"
-            stroke-linejoin="round"
-          >
-            <path d="M12 5v14M19 12l-7 7-7-7" />
-          </svg>
+          <font-awesome-icon :icon="['fas', 'arrow-down']" />
         </div>
       </div>
     </div>
@@ -279,17 +228,27 @@
   border-radius: 0.75rem; // rounded-xl
   border: 1px solid rgba(255, 255, 255, 0.2);
   backdrop-filter: blur(4px);
-  transition: all 0.3s ease;
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
   position: relative;
   overflow: hidden;
   text-decoration: none;
+  will-change: transform, border-color;
 
   &--primary {
     border-color: rgba(255, 255, 255, 0.2); // border-white/20
+    background: linear-gradient(135deg, rgba(167, 139, 250, 0.2) 0%, rgba(96, 165, 250, 0.2) 100%);
   }
 
   &--secondary {
     border-color: rgba(255, 255, 255, 0.1); // border-white/10
+    background: rgba(255, 255, 255, 0.03);
+  }
+
+  &--primary:hover {
+    border-color: var(--accent-purple);
+  }
+  &--secondary:hover {
+    border-color: rgba(255, 255, 255, 0.2);
   }
 }
 
@@ -312,6 +271,10 @@
 
 .hero__scroll-indicator-container {
   margin-top: 4rem; // mt-16
+
+  svg {
+    font-size: 1.5rem;
+  }
 }
 
 .hero__scroll-indicator {
