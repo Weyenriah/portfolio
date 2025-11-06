@@ -82,7 +82,7 @@
         :transition="{ duration: 800, delay: 200 }"
         class="hero__subtitle"
       >
-        I'm Felicia. Designer & Developer crafting beautiful digital experiences
+        I'm Felicia. I design and build digital solutions that help people.
       </p>
 
       <p
@@ -92,9 +92,7 @@
         :transition="{ duration: 800, delay: 400 }"
         class="hero__description"
       >
-        I blend creativity with code to build intuitive, modern interfaces that
-        people love to use. Passionate about design systems, user experience, and
-        bringing ideas to life.
+        I'm passionate about crafting UIs that feel intuitive, clean, and just work. As a hybrid product designer and developer, I love being involved in the whole journey—from untangling that first "messy problem" to building the final, polished product.
       </p>
 
       <div
