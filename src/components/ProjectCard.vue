@@ -1,10 +1,10 @@
 
 <script setup lang="ts">
     interface ProjectCardProps {
-    title: string;
-    description: string;
-    image: string;
-    tags: string[];
+      title: string;
+      description: string;
+      headerImage: string;
+      tags: string[];
     }
     const props = defineProps<ProjectCardProps>();
 
@@ -33,18 +33,12 @@
           :transition="{ duration: 400 }"
         >
           <img
-            :src="props.image"
+            :src="props.headerImage"
             :alt="props.title"
             class="project-card__image"
           />
         </div>
         <div class="project-card__image-gradient" />
-
-        <div class="project-card__hover-icon-wrapper">
-          <div class="project-card__hover-icon-bg">
-            <i class="fa-solid fa-arrow-up-right project-card__hover-icon" />
-          </div>
-        </div>
       </div>
 
       <div class="project-card__text-content">
@@ -55,7 +49,7 @@
 
         <div class="project-card__tags-container">
           <span
-            v-for="(tag, index) in props.tags"
+            v-for="(tag, index) in props.tags.slice(0, 4)"
             :key="index"
             class="project-card__tag"
           >

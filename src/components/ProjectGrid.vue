@@ -41,7 +41,7 @@ const onCardClick = (project: Project) => {
           class="project-card-instance"
           :title="project.title"
           :description="project.description"
-          :image="project.image"
+          :header-image="project.headerImage"
           :tags="project.tags"
           @click="onCardClick(project)"
         />
@@ -124,7 +124,7 @@ const onCardClick = (project: Project) => {
         width: 350px;
       }
       &:nth-child(2) {
-        top: 16%;
+        top: 11%;
         right: 3%;
         width: 380px;
       }

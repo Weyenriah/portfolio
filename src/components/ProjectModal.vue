@@ -1,14 +1,5 @@
 <script setup lang="ts">
-// 1. Define the Project interface
-interface Project {
-  title: string;
-  description: string;
-  longDescription: string;
-  image: string;
-  tags: string[];
-  link?: string;
-  github?: string;
-}
+import { type Project } from '@/data/newProjects';
 
 // 2. Define the component's props
 const props = defineProps<{
@@ -25,6 +16,18 @@ const emit = defineEmits<{
 const handleClose = () => {
   emit('close');
 };
+
+// Markdown-like to HTML converter
+function markdownToHtml(text: string): string {
+  if (!text) return '';
+  // Convert **bold**
+  let html = text.replace(/\*\*(.+?)\*\*/g, '<b>$1</b>');
+  // Convert *italic*
+  html = html.replace(/\*(?!\*)([^*]+)\*/g, '<i>$1</i>');
+  // Convert line breaks
+  html = html.replace(/\n/g, '<br>');
+  return html;
+}
 </script>
 
 <template>
@@ -54,13 +57,13 @@ const handleClose = () => {
             class="modal-close-button"
             :style="{ background: 'rgba(255, 255, 255, 0.05)' }"
           >
-            <i class="fa-solid fa-times" />
+            <font-awesome-icon icon="xmark" />
           </button>
 
           <div class="modal-header">
             <img
               v-if="project"
-              :src="project.image"
+              :src="project.headerImage"
               :alt="project.title"
               class="modal-header-image"
             />
@@ -84,10 +87,6 @@ const handleClose = () => {
                 :initial="{ opacity: 0, scale: 0.8 }"
                 :enter="{ opacity: 1, scale: 1 }"
                 :transition="{ delay: index * 50 }"
-                :style="{
-                  background: 'linear-gradient(135deg, rgba(167, 139, 250, 0.15) 0%, rgba(96, 165, 250, 0.15) 100%)',
-                  color: 'var(--accent-purple)',
-                }"
               >
                 {{ tag }}
               </span>
@@ -96,34 +95,36 @@ const handleClose = () => {
             <div class="modal-details-grid">
               <div>
                 <h3 class="modal-section-title">Overview</h3>
-                <p class="modal-text modal-text--light">
-                  {{ project.description }}
-                </p>
+                <p class="modal-text modal-text--light" v-html="markdownToHtml(project.description)"></p>
               </div>
 
               <div>
                 <h3 class="modal-section-title">Details</h3>
-                <p class="modal-text">
-                  {{ project.longDescription }}
-                </p>
+                <p class="modal-text" v-html="markdownToHtml(project.longDescription)"></p>
+              </div>
+
+              <img v-if="project.showcaseImages[0]" :src="project.showcaseImages[0]" :alt="`${project.title} Features Image`" style="width: 100%; border-radius: 0.5rem; margin-top: 1rem;" />
+
+              <div>
+                <h3 class="modal-section-title">Challenge</h3>
+                <p class="modal-text" v-html="markdownToHtml(project.challengeText)"></p>
               </div>
 
               <div>
-                <h3 class="modal-section-title">Key Features</h3>
-                <ul class="modal-features-list">
-                  <li>
-                    <span :style="{ color: 'var(--accent-purple)' }">•</span>
-                    <span>Responsive design optimized for all devices</span>
-                  </li>
-                  <li>
-                    <span :style="{ color: 'var(--accent-blue)' }">•</span>
-                    <span>Modern tech stack with focus on performance</span>
-                  </li>
-                  <li>
-                    <span :style="{ color: 'var(--accent-purple)' }">•</span>
-                    <span>Intuitive user interface with seamless navigation</span>
-                  </li>
-                </ul>
+                <h3 class="modal-section-title">Process</h3>
+                <p class="modal-text" v-html="markdownToHtml(project.processText)"></p>
+              </div>
+
+              <img v-if="project.showcaseImages[1]" :src="project.showcaseImages[1]" :alt="`${project.title} Solutions Image`" style="width: 100%; border-radius: 0.5rem; margin-top: 1rem;" />
+
+              <div>
+                <h3 class="modal-section-title">Solution</h3>
+                <p class="modal-text" v-html="markdownToHtml(project.solutionText)"></p>
+              </div>
+
+              <div class="image-group">
+                <img v-if="project.showcaseImages[2]" :src="project.showcaseImages[2]" :alt="`${project.title} Additional Image`" style="width: 100%; border-radius: 0.5rem; margin-top: 1rem;" />
+                <img v-if="project.showcaseImages[3]" :src="project.showcaseImages[3]" :alt="`${project.title} Additional Image`" style="width: 100%; border-radius: 0.5rem; margin-top: 1rem;" />
               </div>
             </div>
 
@@ -147,10 +148,9 @@ const handleClose = () => {
                     background: 'linear-gradient(135deg, rgba(167, 139, 250, 0.3) 0%, rgba(96, 165, 250, 0.3) 100%)',
                   }"
                 />
-                <i class="fa-solid fa-external-link modal-link-icon" :style="{ color: 'var(--accent-purple)' }" />
                 <span class="modal-link-text">View Live Project</span>
               </a>
-              
+
               <a
                 v-if="project.github"
                 v-motion
@@ -166,11 +166,9 @@ const handleClose = () => {
                   class="modal-link-hover-bg"
                   :style="{ background: 'rgba(96, 165, 250, 0.2)' }"
                 />
-                <i class="fa-brands fa-github modal-link-icon" :style="{ color: 'var(--accent-blue)' }" />
                 <span class="modal-link-text">View Source Code</span>
               </a>
             </div>
-            
           </div>
         </div>
       </div>
@@ -239,16 +237,13 @@ const handleClose = () => {
   position: relative;
 }
 
-/*
- * 3. Modal Content Styles
- * (These are all the styles from the previous file, renamed)
- */
 .modal-close-button {
   position: absolute;
+  height: 2.5rem;
+  width: 2.5rem;
   top: 1.5rem;
   right: 1.5rem;
   z-index: 50;
-  padding: 0.75rem;
   border-radius: 9999px;
   backdrop-filter: blur(8px);
   border: 1px solid rgba(255, 255, 255, 0.2);
@@ -256,17 +251,9 @@ const handleClose = () => {
   background-color: rgba(255, 255, 255, 0.05);
   transition: background-color 0.2s ease;
   cursor: pointer;
-  
+
   &:hover {
     background-color: rgba(255, 255, 255, 0.1) !important;
-  }
-
-  i {
-    width: 1.25rem;
-    height: 1.25rem;
-    display: block;
-    font-size: 1.25rem;
-    line-height: 1;
   }
 }
 
@@ -309,6 +296,8 @@ const handleClose = () => {
   border-radius: 9999px;
   backdrop-filter: blur(4px);
   border: 1px solid rgba(255, 255, 255, 0.2);
+  background: linear-gradient(135deg, rgba(167, 139, 250, 0.15) 0%, rgba(96, 165, 250, 0.15) 100%);
+  color: var(--accent-purple);
 }
 
 .modal-details-grid {
@@ -407,5 +396,16 @@ const handleClose = () => {
   position: relative;
   z-index: 10;
   transition: color 0.3s ease;
+}
+
+.image-group {
+  display: flex;
+  gap: 1rem;
+
+  img {
+    flex: 1 1 0;
+    max-width: 50%; // For two images, adjust as needed
+    width: auto;
+  }
 }
 </style>
