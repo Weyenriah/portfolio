@@ -72,7 +72,6 @@
   cursor: pointer;
   position: relative;
 
-  // This replaces the Tailwind 'group-hover' logic
   &:hover {
     .project-card__glow-bg {
       opacity: 0.6;
@@ -86,11 +85,10 @@
 .project-card__glow-bg {
   position: absolute;
   inset: 0;
-  border-radius: 1rem; // rounded-2xl
+  border-radius: 1rem;
   opacity: 0.4;
   transition: opacity 0.5s ease;
-  
-  // The inner div creates the blur effect
+
   &::before {
     content: "";
     position: absolute;
@@ -102,9 +100,9 @@
 
 .project-card__content-wrapper {
   position: relative;
-  border-radius: 1rem; // rounded-2xl
+  border-radius: 1rem;
   overflow: hidden;
-  backdrop-filter: blur(16px); // backdrop-blur-xl
+  backdrop-filter: blur(16px);
   border: 1px solid rgba(255, 255, 255, 0.2);
   height: 100%;
   transition: background-color 0.3s ease;
@@ -116,14 +114,13 @@
 
 .project-card__image-container {
   position: relative;
-  aspect-ratio: 16 / 9; // aspect-video
+  aspect-ratio: 16 / 9;
   overflow: hidden;
 }
 
 .project-card__image-scaler {
   position: absolute;
   inset: 0;
-  /* v-motion will handle the scale on hover */
 }
 
 .project-card__image {
@@ -147,25 +144,25 @@
 }
 
 .project-card__hover-icon-bg {
-  padding: 0.5rem; // p-2
-  border-radius: 0.5rem; // rounded-lg
+  padding: 0.5rem;
+  border-radius: 0.5rem;
   backdrop-filter: blur(4px);
   border: 1px solid rgba(255, 255, 255, 0.2);
 }
 
 .project-card__hover-icon {
-  width: 1.25rem; // w-5
-  height: 1.25rem; // h-5
+  width: 1.25rem;
+  height: 1.25rem;
   color: var(--accent-purple);
-  display: block; // Fix for <i> tag layout
+  display: block;
 }
 
 .project-card__text-content {
-  padding: 1.5rem; // p-6
+  padding: 1.5rem;
 }
 
 .project-card__title {
-  font-size: 1.5rem; // text-2xl
+  font-size: 1.5rem;
   line-height: 2rem;
   margin-top: 0;
   margin-bottom: 0.5rem;
@@ -173,26 +170,25 @@
 }
 
 .project-card__description {
-  color: #9ca3af; // text-gray-400
+  color: #9ca3af;
   margin-bottom: 1rem;
-  
-  // This is the CSS for 'line-clamp-2'
   display: -webkit-box;
   -webkit-box-orient: vertical;
   -webkit-line-clamp: 2;
+    line-clamp: 2;
   overflow: hidden;
 }
 
 .project-card__tags-container {
   display: flex;
   flex-wrap: wrap;
-  gap: 0.5rem; // gap-2
+  gap: 0.5rem;
 }
 
 .project-card__tag {
-  padding: 0.25rem 0.75rem; // px-3 py-1
-  border-radius: 9999px; // rounded-full
-  font-size: 0.875rem; // text-sm
+  padding: 0.25rem 0.75rem;
+  border-radius: 9999px;
+  font-size: 0.875rem;
   backdrop-filter: blur(4px);
   border: 1px solid rgba(255, 255, 255, 0.2);
   color: var(--accent-purple);
