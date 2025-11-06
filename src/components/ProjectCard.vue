@@ -24,12 +24,7 @@
     class="project-card"
     @click="emit('click')"
   >
-    <div class="project-card__glow-bg" />
-
-    <div
-      class="project-card__content-wrapper"
-      :style="{ background: 'rgba(255, 255, 255, 0.05)' }"
-    >
+    <div class="project-card__content-wrapper">
       <div class="project-card__image-container">
         <div
           v-motion
@@ -46,10 +41,7 @@
         <div class="project-card__image-gradient" />
 
         <div class="project-card__hover-icon-wrapper">
-          <div
-            class="project-card__hover-icon-bg"
-            :style="{ background: 'rgba(167, 139, 250, 0.2)' }"
-          >
+          <div class="project-card__hover-icon-bg">
             <i class="fa-solid fa-arrow-up-right project-card__hover-icon" />
           </div>
         </div>
@@ -66,9 +58,6 @@
             v-for="(tag, index) in props.tags"
             :key="index"
             class="project-card__tag"
-            :style="{
-              background: 'linear-gradient(135deg, rgba(167, 139, 250, 0.15) 0%, rgba(96, 165, 250, 0.15) 100%)',
-            }"
           >
             {{ tag }}
           </span>
@@ -118,6 +107,11 @@
   backdrop-filter: blur(16px); // backdrop-blur-xl
   border: 1px solid rgba(255, 255, 255, 0.2);
   height: 100%;
+  transition: background-color 0.3s ease;
+
+  &:hover {
+    background-color: rgba(255, 255, 255, 0.03);
+  }
 }
 
 .project-card__image-container {

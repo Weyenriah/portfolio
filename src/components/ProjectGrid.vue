@@ -124,18 +124,18 @@ const onCardClick = (project: Project) => {
         width: 350px;
       }
       &:nth-child(2) {
-        top: 12%;
+        top: 16%;
         right: 3%;
         width: 380px;
       }
       &:nth-child(3) {
-        top: 55%;
-        left: 12%;
+        top: 58%;
+        left: 8%;
         width: 360px;
       }
       &:nth-child(4) {
         top: 72%;
-        right: 15%;
+        right: 12%;
         width: 370px;
       }
       // &:nth-child(5) { top: X; left: Y; width: Z; }

@@ -19,7 +19,7 @@
       <div class="contact__grid">
         <a
           v-motion
-          href="https://linkedin.com/in/yourprofile"
+          href="https://linkedin.com/in/felicia-wallin"
           target="_blank"
           rel="noopener noreferrer"
           class="contact-card"
@@ -30,25 +30,9 @@
           :hovered="{ y: -8, scale: 1.05 }"
           :tapped="{ scale: 0.98 }"
         >
-          <div
-            class="contact-card__content"
-            :style="{ background: 'rgba(255, 255, 255, 0.03)' }"
-          >
-            <div
-              v-motion
-              class="contact-card__glow"
-              :style="{
-                background:
-                  'linear-gradient(135deg, rgba(167, 139, 250, 0.15) 0%, rgba(96, 165, 250, 0.15) 100%)',
-              }"
-              :hovered="{ opacity: 1 }"
-            />
-
+          <div class="contact-card__content">
             <div class="contact-card__inner">
-              <div
-                class="contact-card__icon-wrapper"
-                :style="{ background: 'rgba(167, 139, 250, 0.1)' }"
-              >
+              <div class="contact-card__icon-wrapper">
                 <font-awesome-icon
                   :icon="['fab', 'linkedin']"
                   class="contact-card__icon"
@@ -63,7 +47,7 @@
 
         <a
           v-motion
-          href="mailto:your.email@example.com"
+          href="mailto:felicia@wallin.design"
           class="contact-card"
           :initial="{ opacity: 0, y: 20 }"
           :visible-once="{ opacity: 1, y: 0 }"
@@ -72,25 +56,9 @@
           :hovered="{ y: -8, scale: 1.05 }"
           :tapped="{ scale: 0.98 }"
         >
-          <div
-            class="contact-card__content"
-            :style="{ background: 'rgba(255, 255, 255, 0.03)' }"
-          >
-            <div
-              v-motion
-              class="contact-card__glow"
-              :style="{
-                background:
-                  'linear-gradient(135deg, rgba(167, 139, 250, 0.15) 0%, rgba(96, 165, 250, 0.15) 100%)',
-              }"
-              :hovered="{ opacity: 1 }"
-            />
-
+          <div class="contact-card__content">
             <div class="contact-card__inner">
-              <div
-                class="contact-card__icon-wrapper"
-                :style="{ background: 'rgba(96, 165, 250, 0.1)' }"
-              >
+              <div class="contact-card__icon-wrapper">
                 <font-awesome-icon
                   :icon="['fas', 'envelope']"
                   class="contact-card__icon"
@@ -105,7 +73,7 @@
 
         <a
           v-motion
-          href="https://github.com/yourusername"
+          href="https://github.com/Weyenriah"
           target="_blank"
           rel="noopener noreferrer"
           class="contact-card"
@@ -116,29 +84,13 @@
           :hovered="{ y: -8, scale: 1.05 }"
           :tapped="{ scale: 0.98 }"
         >
-          <div
-            class="contact-card__content"
-            :style="{ background: 'rgba(255, 255, 255, 0.03)' }"
-          >
-            <div
-              v-motion
-              class="contact-card__glow"
-              :style="{
-                background:
-                  'linear-gradient(135deg, rgba(167, 139, 250, 0.15) 0%, rgba(96, 165, 250, 0.15) 100%)',
-              }"
-              :hovered="{ opacity: 1 }"
-            />
-
+          <div class="contact-card__content">
             <div class="contact-card__inner">
-                <div
-                    class="contact-card__icon-wrapper"
-                    :style="{ background: 'rgba(147, 51, 234, 0.1)' }"
-                >
+                <div class="contact-card__icon-wrapper">
                     <font-awesome-icon
-                        :icon="['fab', 'github']"
-                        class="contact-card__icon"
-                        :style="{ color: 'var(--accent-blue)' }"
+                      :icon="['fab', 'github']"
+                      class="contact-card__icon"
+                      :style="{ color: 'var(--accent-blue)' }"
                     />
                 </div>
               <h3 class="contact-card__title">GitHub</h3>
@@ -232,6 +184,11 @@
   text-align: center;
   position: relative;
   overflow: hidden;
+  transition: background-color 0.3s ease;
+
+  &:hover {
+    background: rgba(255, 255, 255, 0.03);
+  }
 }
 
 .contact-card__glow {
@@ -257,6 +214,7 @@
   margin-bottom: 1rem; // mb-4
   backdrop-filter: blur(4px);
   border: 1px solid rgba(255, 255, 255, 0.1);
+  background: rgba(167, 139, 250, 0.1);
 }
 
 .contact-card__icon {
