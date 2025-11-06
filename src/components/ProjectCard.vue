@@ -173,6 +173,7 @@
 .project-card__title {
   font-size: 1.5rem; // text-2xl
   line-height: 2rem;
+  margin-top: 0;
   margin-bottom: 0.5rem;
   color: white;
 }
