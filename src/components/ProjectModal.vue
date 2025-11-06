@@ -400,11 +400,13 @@ function markdownToHtml(text: string): string {
 
 .image-group {
   display: flex;
-  gap: 1rem;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  gap: 2rem;
 
   img {
     flex: 1 1 0;
-    max-width: 50%; // For two images, adjust as needed
+    max-width: 40%; // For two images, adjust as needed
     width: auto;
   }
 }
