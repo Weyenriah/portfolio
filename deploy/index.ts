@@ -35,7 +35,7 @@ const backendBucket = new gcp.compute.BackendBucket("felicia-portfolio-backend-b
 
 export const backendBucketId = backendBucket.id;
 
-/*const challenge = new gcp.certificatemanager.DnsAuthorization("felicia-portfolio-dns-challenge", {
+const challenge = new gcp.certificatemanager.DnsAuthorization("felicia-portfolio-dns-challenge", {
     description: "DNS for wallin.design",
     domain: "wallin.design",
 });
