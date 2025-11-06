@@ -66,5 +66,4 @@ jobs:
           command: up
           stack-name: sidus/felicia-portfolio/prod
           work-dir: deploy
-        env:
-          PULUMI_ACCESS_TOKEN: ${{ secrets.PULUMI_ACCESS_TOKEN }}
+          cloud-url: gs://sidus-pulumi-bucket
