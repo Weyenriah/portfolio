@@ -110,18 +110,5 @@ export const projects: Project[] = [
       "Figma"
     ],
     link: "https://foptec.com",
-  },
-  /*{
-    id: 4,
-    title: "Collaborative Design Tool",
-    description: "Real-time collaborative design tool for teams to brainstorm and prototype together.",
-    longDescription: "Developed a web-based design tool with real-time collaboration features, allowing multiple users to work on the same canvas simultaneously. Includes vector editing, commenting system, version history, and seamless Figma integration. Used by design teams at startups and enterprises for rapid prototyping and ideation sessions.",
-    image: "https://images.unsplash.com/photo-1510074377623-8cf13fb86c08?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxkZXNpZ24lMjBzdHVkaW98ZW58MXx8fHwxNzYyMzE5NzU4fDA&ixlib=rb-4.1.0&q=80&w=1080&utm_source=figma&utm_medium=referral",
-    tags: ["WebGL", "Socket.io", "Vue.js", "Canvas"],
-    link: "https://example.com",
-    layout: {
-      style: { top: '72%', right: '15%', width: '370px' },
-      delay: 200
-    }
-  },*/
+  }
 ];
