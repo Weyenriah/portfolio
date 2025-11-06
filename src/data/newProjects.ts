@@ -57,7 +57,8 @@ export const projects: Project[] = [
       'Accessibility (WCAG)', 
       'Web App', 
       'Native App (iOS)', 
-      'Figma'
+      'Figma',
+      'Client Collaboration'
     ],
     link: "https://www.hemsamtal.se"
   },
@@ -88,6 +89,46 @@ export const projects: Project[] = [
   },
   {
     id: 3,
+    title: 'Atnotera: Designing a Brand of "Warmth" and "Professionalism"',
+    description: 'Designing a new brand identity for a human-focused investment firm that balances childcare (warmth) with medicine (professionalism).',
+    longDescription: `Atnotera is a human-focused investment company with a unique portfolio: they invest in both childcare and clinical research/medicine. I was hired as the Lead Designer and Project Manager to create a new website from scratch that could properly communicate this core duality.`,
+  
+    challengeText: `The core challenge was to create a single, cohesive brand identity for a company with two very different sectors: childcare (warmth, care) and medicine (professionalism, clinical).
+
+      Their previous website was a complete mismatch. It felt more like a 'modern art studio' with an unfitting red and black color scheme, and failed to represent their 'human-focused' mission.
+
+      My task was to scrap the old site and design a new, authentic identity that could clearly explain their unique philosophy and showcase their portfolio to all interested visitors.`,
+      
+    processText: `My process began with the client's core vision: find the balance. As the lead, I managed the project from discovery to final launch.
+
+      - **Visual Exploration:** I worked in Figma to find a visual language that could be both warm and professional. The solution came from balancing a **warm beige/orange** (representing the 'care' of childcare) with a **calm, professional blue** (representing the 'clinical' side of medicine).
+
+      - **Cohesive Imagery:** The hardest part was making images of 'children at daycare' and 'hospitals' feel like they belonged on the same site. I solved this by using a consistent photographic style and leveraging the new, blended color palette to create a cohesive theme.
+
+      - **Client Collaboration:** As the Project Manager, I presented a few different homepage themes to the client. This allowed us to quickly align on a main direction, which I then applied smoothly across the rest of the site.`,
+      
+    solutionText: `The final solution is a clean, modern website that successfully navigates the brand's core duality. The new design feels trustworthy and professional, yet remains human-centered and warm, using the balanced color palette and curated imagery to tell a cohesive story.
+
+      The part I'm most proud of is actually finding that balance, as it was a unique and interesting design challenge to solve. The client was very pleased with the final result, as it finally gave them a digital identity that truly represented who they are. The website is still live and in use today.`,
+    headerImage: signImageUrl('atnoteraheader'),
+    showcaseImages: [
+      signImageUrl('atnotera1'),
+      signImageUrl('atnotera2'),
+      signImageUrl('atnotera3'),
+      signImageUrl('atnotera4'),
+    ],
+    tags: [
+      'UX/UI Design',
+      'Brand Identity',
+      'Visual Design',
+      'Project Management',
+      'Figma',
+      'Client Collaboration'
+    ],
+    link: "https://atnotera.se",
+  },
+  {
+    id: 4,
     title: "Foptec: Making a Niche B2B Product Easy to Digest",
     description: "A solo, end-to-end redesign of a food-tech SaaS website to modernize the brand and make a complex product easy to digest.",
     longDescription: "Foptec is a B2B SaaS platform for food compliance — a domain that can be complex and dry. Their old website was outdated and failed to make their powerful product desirable. I had the opportunity to lead a complete redesign of their website as a one-person design and development team.",
