@@ -1,3 +1,6 @@
-name: portfolio
-runtime: nodejs
+name: felicia-portfolio
 description: Deploy wallin.design
+runtime:
+  name: nodejs
+  options:
+    packagemanager: npm
