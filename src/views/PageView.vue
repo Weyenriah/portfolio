@@ -7,7 +7,7 @@ import ProjectModal from '@/components/ProjectModal.vue';
 import Contact from '@/components/ContactInfo.vue';
 import GlobalOrb from '@/components/GlobalOrb.vue';
 import { orbData } from '@/data/orbs';
-import { type Project } from '@/data/newProjects';
+import type { Project } from '@/data/newProjects';
 
 
 const selectedProject = ref<Project | null>(null);
