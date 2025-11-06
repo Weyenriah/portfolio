@@ -32,7 +32,12 @@ jobs:
           push: true
           tags: weyenriah/portfolio:latest
 
+      # Deploy
       - name: Deploy
-        uses: wei/curl@v1
+        uses: pulumi/actions@v3
         with:
-          args: "-H 'Authorization: Bearer ${{ secrets.SIDUS_WATCHTOWER_TOKEN }}' https://watchtower.sidus.io/v1/update"
+          command: up
+          stack-name: sidus/felicia-portfolio/prod
+          work-dir: deploy
+        env:
+          PULUMI_ACCESS_TOKEN: ${{ secrets.PULUMI_ACCESS_TOKEN }}
